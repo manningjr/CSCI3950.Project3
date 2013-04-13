@@ -5,16 +5,38 @@
 <title>The PupFetcher</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+<link rel="Stylesheet" type="text/css" href="css/dropdownMenu.css" />
 </head>
 
 <body>
-<div class="container">
-
-<!--<div class="navigation"><li id="Home"><a href="index.php">Home</a></li><li id="Puppies"><a href="puppies.html">Puppies</a></li><li id="Info"><a href="info.html">Info</a></li></div>-->
 
   <div class="logo">
     <a href="index.php"> <img src="img/logo.png" alt="Logo" name="logo" width="200" height="200"/></a>
     </div>
+    
+  <div class="container">
+
+			<ul class="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Login</a>
+					<ul class="dropdown">
+						<li><a href="#">Link</a></li>
+						<li><a href="#">Link</a>
+							<ul class="dropdown">
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Link</a></li>
+						<li><a href="#">Link</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 
   <div class="content">
   

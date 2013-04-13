@@ -1,0 +1,99 @@
+* {
+
+  margin:0;
+	padding:0;
+	font-family:Helvetica Neue, Helvetica;
+	font-size:13px;
+}
+
+.container {
+	width:960px;
+	margin:150px auto;
+}
+
+/*
+ * Beginning of the actual menu code.
+ * 
+ */
+
+ul.menu {
+	height:40px;
+	list-style:none; /* remove bullet points */
+	background:black;
+
+}
+
+ul.menu li {
+	float:left;
+}
+
+ul.menu li a {
+	display:block;
+	height:40px;
+	width:100px;
+	margin:0px 10px 0px 10px;
+	padding:0px 5px 0px 5px;
+	line-height:40px; /* Center the text vertically */
+	text-decoration:none;
+	color: white;
+	text-align:center;
+
+	background:black;
+}
+
+ul.menu li:hover a {
+	background:red;
+}
+
+/*
+ * Level 1 Dropdowns
+ */
+
+ul.menu li:hover ul.dropdown {
+	display:block;
+}
+
+
+ul.menu li ul.dropdown {
+	display:none;
+	list-style:none;
+
+}
+
+ul.menu li ul.dropdown li {
+	float:none;
+	position:relative;
+}
+
+ul.menu li ul.dropdown li a {
+	background:black;
+}
+
+ul.menu li ul.dropdown li:hover a {
+	background:pink;
+}
+
+/*
+ * Level 2 Dropdowns
+ */
+
+ul.menu li ul.dropdown li:hover ul.dropdown {
+	display:block;
+}
+
+ul.menu li ul.dropdown li ul.dropdown {
+	position:absolute;
+	left:110px;
+	top:0px;
+	display:none;
+
+}
+
+ul.menu li ul.dropdown li ul.dropdown li a {
+	background:gray;
+}
+
+
+ul.menu li ul.dropdown li ul.dropdown li:hover a {
+	background:orange;
+}
