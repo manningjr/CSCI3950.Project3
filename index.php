@@ -10,12 +10,12 @@
 
 <body>
 
-  <div class="logo">
+  <!--div class="logo">
     <a href="index.php"> <img src="img/logo.png" alt="Logo" name="logo" width="200" height="200"/></a>
-    </div>
+  </div-->
     
   <div class="container">
-
+  	<a href="index.php"> <img src="img/logo.png" alt="Logo" name="logo" width="200" height="200"/></a>
 			<ul class="menu">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a>
@@ -32,7 +32,7 @@
 					</ul>
 				</li>
 			</ul>
-		</div>
+	</div>
 
   <div class="content">
   
