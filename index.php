@@ -18,21 +18,17 @@
 
 			<ul class="menu">
 				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a>
+                    <ul class="dropdown">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Contact</a>
+                    </ul>
+               	</li>
+                <li><a href="#">Cart</a></li>
 				<li><a href="#">Login</a>
 					<ul class="dropdown">
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a>
-							<ul class="dropdown">
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Account</a></li>
 					</ul>
 				</li>
 			</ul>

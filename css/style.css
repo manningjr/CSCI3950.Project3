@@ -53,11 +53,6 @@ li
 	padding-left: 40px;
 }
 
-.container {
-	width: 1100px;
-	margin: 0 auto;
-}
-
 .content{
 	background-image: url(../img/back_cell2.png);
 	background-repeat: repeat;
