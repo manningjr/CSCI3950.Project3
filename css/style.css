@@ -67,18 +67,9 @@ li
 }
 /* End of Nav Bar*/
 
-body {
-	background-image: url(../img/tile2.png);
-	background-color: #FFFFFF;
-	background-repeat: repeat;
-	color: #999;
-
-	font-family: Helvetica,Arial, sans-serif;
-	font-weight: normal;
-}
-
 <<<<<<< HEAD
 =======
+
 /*.container {
 	width: 1100px;
 	margin: 0 auto;
