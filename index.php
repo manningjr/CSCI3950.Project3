@@ -51,7 +51,7 @@ $(document).ready(function() {
 				<li><a href="#">About</a>
                     <ul class="dropdown">
                             <li><a href="#">History</a></li>
-                            <li><a href="#">Contact</a>
+                            <li><a href="#">Contact</a></li>
                     </ul>
                	</li>
                 <li><a href="#">Cart</a></li>
