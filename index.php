@@ -5,12 +5,42 @@
 <title>The PupFetcher</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+<<<<<<< HEAD
 <link rel="Stylesheet" type="text/css" href="css/dropdownMenu.css" />
+=======
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script language="javascript" type="text/javascript">
+// run the function below once the DOM(Document Object Model) is ready 
+$(document).ready(function() {
+    // trigger the function when clicking on an assigned element
+    $(".toggle").click(function () {
+        // check the visibility of the next element in the DOM
+        if ($(this).next().is(":hidden")) {
+             $(this).next().slideDown("fast"); // slide it down
+			//$(this).hide("slide", { direction: "left" }, 1000);
+			//$(this).next("slide", { direction: "left" }, 1000);
+			//.show("slide",{direction: 'right'}, 1000);
+        } else {
+           $(this).next().hide(); // hide it
+        }
+    });
+});
+</script>
+>>>>>>> Complete the design of the main layout
 </head>
 
 <body>
 
+<<<<<<< HEAD
   <!--div class="logo">
+=======
+<div class="navigation"><li id="Home">Home</li><li id="Puppies">Puppies</li><li id="Info">Info</li></div>
+
+<div class="nav-letters"><li id="Home"><a href="index.php"><img src="img/paw.png" name="paw" width="15" height="15" /> Home</a></li><li id="Puppies"><a href="puppies.html"><img src="img/paw.png" name="paw" width="15" height="15" /> Puppies</a></li><li id="Info"><a href="info.html"><img src="img/paw.png" name="paw" width="15" height="15"/> Info</a></li></div>
+
+  <div class="logo">
+>>>>>>> Complete the design of the main layout
     <a href="index.php"> <img src="img/logo.png" alt="Logo" name="logo" width="200" height="200"/></a>
   </div-->
     
@@ -33,6 +63,8 @@
 				</li>
 			</ul>
 	</div>
+
+
 
   <div class="content">
   
@@ -74,8 +106,10 @@
 		});
 	</script>
   </div>
-    <div class="title">
-  .   .   .
+  <div class="paws">
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
   </div>
   <div class="slogan">
    <div class="title2">
@@ -99,6 +133,12 @@
      <p>Project 3 Designed by the A-Team. Copyright &copy; 2013.</p>
     <!-- end .footer --></div>
   <!-- end .content --></div> 
+
+<!--Sidebar-->
+<?php
+include("sidebar.php");
+?>
+<!--End of Sidebar-->
 
   <!-- end .container --></div>
   <!-- end .background--></div>
