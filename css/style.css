@@ -6,12 +6,39 @@ body {
 	background-color: #FFFFFF;
 	background-repeat: repeat;
 	color: #999;
-
 	font-family: Helvetica,Arial, sans-serif;
 	font-weight: normal;
 }
 
+/* Nav Bar*/
 .navigation
+{
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	color: rgb(121,146,223);
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgb(121,146,223);
+	position: absolute;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 35px;
+	padding-right: 60px;
+	margin-top: 55px;
+	margin-left: 180px;
+	border: thin solid rgb(0,0,0);
+	-moz-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	-webkit-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	-moz-border-radius: 15px 15px 0px 0px;
+	-webkit-border-radius: 15px 15px 0px 0px;
+	-khtml-border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
+	z-index: -1;
+}
+
+.nav-letters
 {
 	text-transform: uppercase;
 	text-align: center;
@@ -19,18 +46,26 @@ body {
 	color: #FFF;
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #000;
 	position: absolute;
-	padding-top:20px;
-	padding-bottom:20px;
-	padding-left:10px;
-	margin-top:55px;
-	margin-left: 200px;
-	
-	-moz-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);
-	-webkit-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);
-	box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);
+	padding: 20px;
+	padding-bottom: 20px;
+	padding-left: 25px;
+	margin-top: 55px;
+	margin-left: 180px;
+	z-index: 3;
 }
+
+li
+{
+	display: inline;
+	font-weight: bold;
+	color: rgb(121,146,223);
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+/* End of Nav Bar*/
 
 body {
 	background-image: url(../img/tile2.png);
@@ -42,17 +77,19 @@ body {
 	font-weight: normal;
 }
 
-li
-{
-	display: inline;
-	font-weight: bold;
-	color: #000;
-	text-decoration: none;
-	text-transform: uppercase;
-	padding-right: 40px;
-	padding-left: 40px;
+<<<<<<< HEAD
+=======
+.container {
+	width: 1100px;
+	margin: 0 auto;
 }
 
+.logo{
+	position:relative;
+	z-index:2;
+	}
+
+>>>>>>> Added a Bunch of shit
 .content{
 	background-image: url(../img/back_cell2.png);
 	background-repeat: repeat;
@@ -69,6 +106,8 @@ li
 	-webkit-border-radius: 5px;
 	-khtml-border-radius: 5px;
 	border-radius: 5px;
+	position:relative;
+	z-index:1;
 	}
 
 .title{
@@ -83,6 +122,14 @@ li
 	height:auto;
 	width: auto;
 }
+.paws{
+	margin-top:15px;
+	text-align:center;
+	}
+
+.paw{
+	padding-right:20px;
+	}
 
 .title2{
 	font-size: 36px;
@@ -96,10 +143,77 @@ li
 	padding:10px;
 }
 
+.toggle{
+	position: absolute;
+	background-color: rgb(121,146,223);
+	height: 400px;
+	width: 80px;
+	top: 220px;
+	margin-left: 26px;
+	border: thin solid rgb(0,0,0);
+	-moz-box-shadow: -1px 0 0px 3px rgba(100, 100, 100, 0.8);
+	-webkit-box-shadow: -1px 0 0px 3px rgba(100, 100, 100, 0.8);
+	box-shadow: -1px 0 0px 3px rgba(100, 100, 100, 0.8);
+	-moz-border-radius: 15px 0px 0px 15px;
+	-webkit-border-radius: 15px 0px 0px 15px;
+	-khtml-border-radius: 15px 0px 0px 1px;
+	border-radius: 15px 0px 0px 15px;
+	background-image: url(../img/sidebar.png);
+	cursor:pointer;
+	z-index: 5;
+	}
+	
+	.toggle:hover{
+	position: absolute;
+	height: 400px;
+	width: 80px;
+	top: 220px;
+	margin-left: 26px;
+	background-image: url(../img/sidebarH.png);
+	cursor:pointer;
+	z-index: 5;
+	}
+
+.hiddenDiv{
+color:rgb(255,255,255);
+display:none;
+background-color: rgb(121,146,223);
+position: absolute;
+border:#030 1px solid;
+height:400px;
+width:300px;
+top:220px;
+padding: 0px 15px 0px 15px;
+margin-left:110px;
+border: thin solid rgb(0,0,0);
+	-moz-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	-webkit-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	-moz-border-radius: 0px 15px 15px 0px;
+	-webkit-border-radius: 0px 15px 15px 0px;
+	-khtml-border-radius: 0px 15px 15px 0px;
+	border-radius: 0px 15px 15px 0px;
+	z-index: 6;
+}
+
 .footer {
 	padding-left:30%;
 	padding-right:30%;
 	text-align:center;
 	font-size: 14px;
 		color: #FFF;
+}
+
+/*Links*/
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus {
+	text-decoration: none;
+	color: #000000;
 }
