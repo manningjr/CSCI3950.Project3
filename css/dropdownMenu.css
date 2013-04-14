@@ -21,7 +21,7 @@ ul.menu {
 	height:40px;
 	margin-left: 100px;
 	list-style:none; /* remove bullet points */
-	background:black;
+	background: none;
 
 }
 
@@ -39,8 +39,16 @@ ul.menu li a {
 	text-decoration:none;
 	color: white;
 	text-align:center;
-
-	background:black;
+	background:rgb(121,146,223);
+	border: thin solid rgb(0,0,0);
+	-moz-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	-webkit-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+	-moz-border-radius: 0px 15px 15px 0px;
+	-webkit-border-radius: 0px 15px 15px 0px;
+	-khtml-border-radius: 0px 15px 15px 0px;
+	border-radius: 0px 15px 15px 0px;
+	z-index: 6;
 }
 
 ul.menu li:hover a {
@@ -68,7 +76,7 @@ ul.menu li ul.dropdown li {
 }
 
 ul.menu li ul.dropdown li a {
-	background:black;
+	background:rgb(121,146,223);
 }
 
 ul.menu li ul.dropdown li:hover a {
