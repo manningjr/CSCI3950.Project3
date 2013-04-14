@@ -79,10 +79,12 @@ body {
 
 <<<<<<< HEAD
 =======
-.container {
+/*.container {
 	width: 1100px;
 	margin: 0 auto;
 }
+This is taken care of in dropdownMenu.CSS
+*/
 
 .logo{
 	position:relative;
