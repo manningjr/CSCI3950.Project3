@@ -5,9 +5,9 @@
     <title>The PupFetcher</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
-    <<<<<<< HEAD
+    <!-- <<<<<<< HEAD -->
     <link rel="Stylesheet" type="text/css" href="css/dropdownMenu.css" />
-    =======
+    <!-- ======= -->
     
     <script type="text/javascript" src="js/jquery.js"></script>
     <script language="javascript" type="text/javascript">
@@ -27,11 +27,11 @@
         });
     });
     </script>
-    >>>>>>> Complete the design of the main layout
+    <!-- >>>>>>> Complete the design of the main layout -->
 </head>
 	<body>
     
-        <<<<<<< HEAD
+        <!-- <<<<<<< HEAD -->
           <!--div class="logo">
         =======
         <div class="navigation"><li id="Home">Home</li><li id="Puppies">Puppies</li><li id="Info">Info</li></div>
