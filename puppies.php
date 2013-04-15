@@ -46,19 +46,15 @@
 
           <?php
 
-            $database = database_connect();
-
-            $q1 = "SELECT * FROM `puppies`";
-
-            $results = mysql_query($q1);
-
-
-            while($puppy = mysql_fetch_assoc($results))
+            $database = database::getInstance();
+  
+            $result = $database->query("SELECT * FROM `puppies`");
+  
+            foreach($result as $res)
             {
-              print_r($puppy);
+            
+              print_r($res);
             }
-
-            //print_r($puppy);
 
           ?>
   

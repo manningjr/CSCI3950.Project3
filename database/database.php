@@ -42,20 +42,20 @@ class database
 	}
 	
 	
-	public function __construct()
+	private function __construct()
 	{
-		$this->db = mysql(DB_HOST, DB_USER, DB_PASS);
+		$this->db = mysql_connect(DB_HOST, DB_USER, DB_PASS);
 		
-		$blah = mysql_select_db($this->db, DB_DB);
+		$blah = mysql_select_db(DB_DB, $this->db);
 	}
 	
 	public function query($query)
 	{
-		$this->result = mysqli_query($query);
+		$this->result = mysql_query($query);
 		
 		$ret = array();
 		
-		while($temp = mysqli_fetch_assoc($this->result))
+		while($temp = mysql_fetch_assoc($this->db, $this->result))
 		{
 			$ret[] = $temp;
 		}
