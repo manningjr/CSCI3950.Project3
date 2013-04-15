@@ -156,8 +156,9 @@ li
 	width: 80px;
 	top: 220px;
 	margin-left: 26px;
+	background-color: rgb(102,204,255);
 	background-image: url(../img/sidebarH.png);
-	cursor:pointer;
+	cursor: pointer;
 	z-index: 5;
 	}
 

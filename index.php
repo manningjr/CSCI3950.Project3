@@ -2,44 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>The PupFetchet</title>
+<title>The PupFetcher</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+<?php
+include("sidebarJquery.php");
+?>
 
-
-<script type="text/javascript" src="js/jquery.js"></script>
-<script language="javascript" type="text/javascript">
-// run the function below once the DOM(Document Object Model) is ready 
-$(document).ready(function() {
-    // trigger the function when clicking on an assigned element
-    $(".toggle").click(function () {
-        // check the visibility of the next element in the DOM
-        if ($(this).next().is(":hidden")) {
-             $(this).next().slideDown("fast"); // slide it down
-			//$(this).hide("slide", { direction: "left" }, 1000);
-			//$(this).next("slide", { direction: "left" }, 1000);
-			//.show("slide",{direction: 'right'}, 1000);
-        } else {
-           $(this).next().hide(); // hide it
-        }
-    });
-});
-</script>
 </head>
 
 <body>
 <div class="container">
 
-<div class="navigation"><li id="Home">Home</li><li id="Puppies">Puppies</li><li id="Info">Info</li></div>
-
-<div class="nav-letters">
-<li id="Home"><a href="index.php"><img src="img/paw.png" name="paw" width="15" height="15" /> Home</a></li><li id="Puppies"><a href="puppies.html"><img src="img/paw.png" name="paw" width="15" height="15" /> Puppies</a></li><li id="Info"><a href="info.html"><img src="img/paw.png" name="paw" width="15" height="15"/> Info</a> </li></div>
-
-  <div class="logo">
-    <a href="index.php"> <img src="img/logo.png" alt="Logo" name="logo" width="200" height="200"/></a>
-    </div>
-
-
+<?php
+include("navBar.php");
+?>
 
   <div class="content">
   
@@ -59,6 +36,8 @@ $(document).ready(function() {
         <img src="img/puppic/8.jpg" alt="Demo image" id="8" />
         <img src="img/puppic/9.jpg" alt="Demo image" id="9" />
         <img src="img/puppic/10.jpg" alt="Demo image" id="10" />
+        <img src="img/puppic/11.jpg" alt="Demo image" id="11" />
+        <img src="img/puppic/12.jpg" alt="Demo image" id="12" />
 	</div>
   
 <!-- jQuery library - Please load it from Google API's -->
@@ -80,12 +59,14 @@ $(document).ready(function() {
 			});
 		});
 	</script>
+    
   </div>
   <div class="paws">
   <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
   <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
   <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
   </div>
+  
   <div class="slogan">
    <div class="title2">
   EASY
