@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
 
   margin:0;
@@ -16,11 +17,12 @@
  * Beginning of the actual menu code.
  * 
  */
+=======
+>>>>>>> Adjustments
 
 ul.menu {
-	height:40px;
-	margin-left: 100px;
 	list-style:none; /* remove bullet points */
+<<<<<<< HEAD
 	background: none;
 
 }
@@ -54,6 +56,10 @@ ul.menu li a {
 ul.menu li:hover a {
 	background:red;
 }
+=======
+}
+
+>>>>>>> Adjustments
 
 /*
  * Level 1 Dropdowns
@@ -61,26 +67,34 @@ ul.menu li:hover a {
 
 ul.menu li:hover ul.dropdown {
 	display:block;
+	line-height:40px; /* Center the text vertically */
 }
 
 
 ul.menu li ul.dropdown {
 	display:none;
 	list-style:none;
-
+line-height:40px; /* Center the text vertically */
 }
 
 ul.menu li ul.dropdown li {
 	float:none;
 	position:relative;
+	line-height:40px; /* Center the text vertically */
 }
 
 ul.menu li ul.dropdown li a {
+<<<<<<< HEAD
 	background:rgb(121,146,223);
+=======
+	background:black;
+	line-height:40px; /* Center the text vertically */
+>>>>>>> Adjustments
 }
 
 ul.menu li ul.dropdown li:hover a {
 	background:pink;
+	line-height:40px; /* Center the text vertically */
 }
 
 /*
@@ -89,6 +103,7 @@ ul.menu li ul.dropdown li:hover a {
 
 ul.menu li ul.dropdown li:hover ul.dropdown {
 	display:block;
+	line-height:40px; /* Center the text vertically */
 }
 
 ul.menu li ul.dropdown li ul.dropdown {
@@ -96,14 +111,16 @@ ul.menu li ul.dropdown li ul.dropdown {
 	left:110px;
 	top:0px;
 	display:none;
-
+line-height:40px; /* Center the text vertically */
 }
 
 ul.menu li ul.dropdown li ul.dropdown li a {
 	background:gray;
+	line-height:40px; /* Center the text vertically */
 }
 
 
 ul.menu li ul.dropdown li ul.dropdown li:hover a {
 	background:orange;
+	line-height:40px; /* Center the text vertically */
 }
