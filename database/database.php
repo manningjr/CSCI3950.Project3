@@ -25,4 +25,51 @@ function database_connect()
 	return $link;
 }
 
+class database 
+{
+	private static $instance = NULL;
+	private $db;
+	private $result;
+	
+	public static function getInstance()
+	{
+		if(self::$instance == NULL)
+		{
+			self::$instance = new database();
+		}
+		
+		return self::$instance;
+	}
+	
+	
+	public function __construct()
+	{
+		$this->db = mysql(DB_HOST, DB_USER, DB_PASS);
+		
+		$blah = mysql_select_db($this->db, DB_DB);
+	}
+	
+	public function query($query)
+	{
+		$this->result = mysqli_query($query);
+		
+		$ret = array();
+		
+		while($temp = mysqli_fetch_assoc($this->result))
+		{
+			$ret[] = $temp;
+		}
+		
+		return $ret;
+	}
+	
+	
+	
+	
+}
+
+
+
+
+
 ?>
