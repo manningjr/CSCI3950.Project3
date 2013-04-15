@@ -4,7 +4,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
-define('DB_DB', 'puppies');
+define('DB_DB', 'PupFetcher');
 
 /*
 define('DB_HOST', 'localhost');
@@ -25,48 +25,6 @@ function database_connect()
 	return $link;
 }
 
-class database 
-{
-	private static $instance = NULL;
-	private $db;
-	private $result;
-	
-	public static function getInstance()
-	{
-		if(self::$instance == NULL)
-		{
-			self::$instance = new database();
-		}
-		
-		return self::$instance;
-	}
-	
-	
-	private function __construct()
-	{
-		$this->db = mysql_connect(DB_HOST, DB_USER, DB_PASS);
-		
-		$blah = mysql_select_db(DB_DB, $this->db);
-	}
-	
-	public function query($query)
-	{
-		$this->result = mysql_query($query);
-		
-		$ret = array();
-		
-		while($temp = mysql_fetch_assoc($this->db, $this->result))
-		{
-			$ret[] = $temp;
-		}
-		
-		return $ret;
-	}
-	
-	
-	
-	
-}
 
 
 /* Usage of database class 
