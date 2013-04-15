@@ -28,13 +28,39 @@
     <div class="container">
 
       <?php
-        include("navBar.php");
+        
+          include("navBar.php");
+
+
+            $database = database_connect();
+
+            $q1 = "SELECT * FROM `puppies`";
+
+            $blah = mysql_query($q1);
+
+
+            while($puppy = mysql_fetch_assoc($blah))
+            {
+              $pupName = $puppy['name'];
+              $breed = $puppy['breed'];
+              $birthday = $puppy['birthday'];
+              $sex = $puppy['sex'];
+              if ($puppy['vaccination'] == 1)
+                $vaccin = "Yes";
+              else
+                $vaccin = "No";
+              $price = $puppy['price'];
+              $location = $puppy['location'];
+            }
       ?>
 
         <div class="contentProfile">
   
+          
 
 
+
+          <br><br><br>
 
 
 
@@ -58,26 +84,7 @@
       
     <?php
 
-            $database = database_connect();
-
-            $q1 = "SELECT * FROM `puppies`";
-
-            $blah = mysql_query($q1);
-
-
-            while($puppy = mysql_fetch_assoc($blah))
-            {
-              $pupName = $puppy['name'];
-              $breed = $puppy['breed'];
-              $birthday = $puppy['birthday'];
-              $sex = $puppy['sex'];
-              if ($puppy['vaccination'] == 1)
-                $vaccin = "Yes";
-              else
-                $vaccin = "No";
-              $price = $puppy['price'];
-              $location = $puppy['location'];
-            }
+            
     
 
             echo "<table>";
