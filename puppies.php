@@ -43,24 +43,6 @@
            </div>
 
 
-
-          <?php
-
-            $database = database_connect();
-
-            $q1 = "SELECT * FROM `puppies`";
-
-            $blah = mysql_query($q1);
-
-
-            while($puppy = mysql_fetch_assoc($blah))
-            {
-              print_r($puppy);
-            }
-
-           
-
-          ?>
   
      <div class="paws">
      <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
@@ -75,25 +57,40 @@
      <div class="pupInfo">
       
     <?php
-    $pupName="Turk";
-    $breed="Lab";
-    $birthday="03-02-2012";
-    $sex="Female";
-    $vaccin="Yes";
-    $price="1000";
-    $location="Oregon";
 
-    echo "<form action='buyForm.php'>";
+            $database = database_connect();
 
-    echo "<table>";
-    echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
-    echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
-    echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
-    echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
-    echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
-    echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
-    echo "<tr><td>Location:</td><td><b>$location</b></td></tr>";
-    echo "</table>";
+            $q1 = "SELECT * FROM `puppies`";
+
+            $blah = mysql_query($q1);
+
+
+            while($puppy = mysql_fetch_assoc($blah))
+            {
+              $pupName = $puppy['name'];
+              $breed = $puppy['breed'];
+              $birthday = $puppy['birthday'];
+              $sex = $puppy['sex'];
+              if ($puppy['vaccination'] == 1)
+                $vaccin = "Yes";
+              else
+                $vaccin = "No";
+              $price = $puppy['price'];
+              $location = $puppy['location'];
+            }
+    
+
+            echo "<form action='buyForm.php'>";
+
+            echo "<table>";
+            echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
+            echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
+            echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
+            echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
+            echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
+            echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
+            echo "<tr><td>Location:</td><td><b>$location</b></td></tr>";
+            echo "</table>";
     ?>
     </div>  
 
