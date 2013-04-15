@@ -101,7 +101,6 @@ include("sidebar.php");
   <!-- end .background--></div>
   </body>
 </html>
-=======
 <?php
 
 /*
