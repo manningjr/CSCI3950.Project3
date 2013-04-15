@@ -5,7 +5,7 @@
 <?php
 ini_set('display_errors', 1);
 echo"<p><h3> Select Your Puppy By</h3>";
-   echo "<form action='pupFetch.php'>";
+   echo "<form action='search.php' method='post'>";
    echo "<table>";
    echo "<tr><td>Breed:</td><td><input type = 'text' name = 'breed' /></td></tr>";
    echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' /></td></tr>";
@@ -15,7 +15,7 @@ echo"<p><h3> Select Your Puppy By</h3>";
 <option value='female'>Female</option>
 </select></td></tr>";
     echo "<tr><td>Age:</td><td><select name='age'> 
-<option value='' selected='selected'>Between</option> 
+<option value='' selected='selected'>Select an age</option> 
 <option value='0-1'>Up to 1 week</option> 
 <option value='1-4'>1 week to 4 weeks</option> 
 <option value='4-3m'>4 weeks to 3 months</option>

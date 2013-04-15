@@ -80,8 +80,6 @@
             }
     
 
-            echo "<form action='buyForm.php'>";
-
             echo "<table>";
             echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
             echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
