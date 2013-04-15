@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
 <?php
+ini_set('display_errors', 1);
 include("sidebarJquery.php");
 ?>
 

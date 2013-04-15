@@ -3,6 +3,7 @@
 </span>
 <div class="hiddenDiv">
 <?php
+ini_set('display_errors', 1);
 echo"<p><h3> Select Your Puppy By</h3>";
    echo "<form action='pupFetch.php'>";
    echo "<table>";
