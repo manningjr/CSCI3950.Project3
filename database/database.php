@@ -69,6 +69,23 @@ class database
 }
 
 
+/* Usage of database class 
+
+
+	$database = database::getInstance();
+	
+	$result = $database->query("SELECT * FROM `table`");
+	
+	foreach($result as $res)
+	{
+	
+		print_r($res);
+	}
+
+
+*/
+
+
 
 
 
