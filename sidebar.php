@@ -15,7 +15,7 @@ echo"<p><h3> Select Your Puppy By</h3>";
 </select></td></tr>";
     echo "<tr><td>Age:</td><td><select name='age'> 
 <option value='' selected='selected'>Between</option> 
-<option value='0-1'>Unborn to 1 week</option> 
+<option value='0-1'>Up to 1 week</option> 
 <option value='1-4'>1 week to 4 weeks</option> 
 <option value='4-3m'>4 weeks to 3 months</option>
 <option value='3m-6m'>3 months to 6 months</option>
