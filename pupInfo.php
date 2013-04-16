@@ -38,7 +38,16 @@
 
             $database = database_connect();
 
-            $q1 = "SELECT * FROM `puppies` WHERE `puppy_id`=" . $_GET['id'];
+            
+
+            $q2 = "SELECT MAX(puppy_id) FROM `puppies`";
+
+            $result = mysql_fetch_array(mysql_query($q2));
+
+
+            $id = (isset($_GET['id']) && $_GET['id'] <= $result[0]) ? $_GET['id'] : 1;
+
+            $q1 = "SELECT * FROM `puppies` WHERE `puppy_id`=" . $id;
 
             $blah = mysql_query($q1);
 
@@ -96,13 +105,13 @@
     </div>  
 
     <div class="favorite">
-    <a href="pupInfo.php" class="button" style="top: 236px; left: 199px;">Add To Favorite</a>
+    <a href="pupInfo.php?id=<?php echo $id; ?>" class="button" style="top: 236px; left: 199px;">Add To Favorite</a>
 
-    <a href="pupInfo.php" class="button" style="top: 236px; left: 199px;">See Favorites</a>
+    <a href="pupInfo.php?id=<?php echo $id; ?>" class="button" style="top: 236px; left: 199px;">See Favorites</a>
     </div>
 
 
-    
+
       <div class="footer">
       <hr/>
          <p>Project 3 Designed by the A-Team. Copyright &copy; 2013.</p>
