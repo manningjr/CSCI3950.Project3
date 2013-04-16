@@ -24,7 +24,7 @@ echo"<p><h3> Select Your Puppy By</h3>";
 <option value='1a-more'>Older than a year</option>
 </select></td></tr>";
    
-   echo "<tr><td>Location:</td><td><select name='State'> 
+   echo "<tr><td>Location:</td><td><select name='state'> 
 <option value='' selected='selected'>Select</option> 
 <option value='AL'>Alabama</option> 
 <option value='AK'>Alaska</option> 
@@ -34,7 +34,7 @@ echo"<p><h3> Select Your Puppy By</h3>";
 <option value='CO'>Colorado</option> 
 <option value='CT'>Connecticut</option> 
 <option value='DE'>Delaware</option> 
-<option value='DC'>District Of Columbia</option> 
+<option value='DC'>District Of Columbia</option>
 <option value='FL'>Florida</option> 
 <option value='GA'>Georgia</option> 
 <option value='HI'>Hawaii</option> 
@@ -101,7 +101,7 @@ echo"<p><h3> Select Your Puppy By</h3>";
 </select></td></tr>";
 
 
-   echo "<tr><td>Location:</td><td><select name='State'> 
+   echo "<tr><td>Location:</td><td><select name='state'> 
 <option value='' selected='selected'>Select</option> 
 <option value='AL'>Alabama</option> 
 <option value='AK'>Alaska</option> 
