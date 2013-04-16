@@ -28,7 +28,7 @@ include("loginJquery.php");
 
 
   <body>
-    <div class="container">
+     <div class="container">
 
       <?php      
           include("navBar.php");
@@ -37,6 +37,19 @@ include("loginJquery.php");
 	<?php
 		include("login.php");
 	?>
+
+        <div class="contentProfile">
+
+          <div class="title">
+           	Register
+          </div>
+
+ 
+     <div class="paws">
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     </div>
     
 <div class="login">   
     <h3>Register</h3>

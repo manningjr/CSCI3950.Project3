@@ -54,7 +54,7 @@ echo"<p><h3> Register</h3>";
             
             <tr>
             	<td><a href='#'><u>Forgot Password</u>&nbsp;</a></td>
-                <td><a href='#'><u>Register</u>&nbsp;</a></td>
+                <td><a href="register.php" target="_blank"><u>Register</u>&nbsp;</a></td>
             </tr>
             	
         </form>
