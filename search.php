@@ -1,9 +1,10 @@
 <?php
 	
-
 	$post = $_POST;
 
 	print_r($post);
+
+
 
 	$breed = $post['breed'];
 	$name = $post['pupName'];
@@ -115,9 +116,9 @@
 	echo "Sex: " . $sex . "<br>";
 	echo "Age: " . $age . "<br>";
 	echo "Location: " . $location . "<br>";
-	echo "Start: " . $startAge . "<br>";
-	echo "End: " . $endAge . "<br>";
-	echo date("m-d-y") . "<br>";
+	echo "Start: " . $startAge . " days before present<br>";
+	echo "End: " . $endAge . " days before present<br>";
+	echo "Current date: " . date("m-d-y") . "<br>";
 
 	$startDate = mktime(0,0,0,date("m"),date("d")-$endAge,date("Y"));		// Gets the beginning date for query range
 	echo "Beginning query date is " . date("m-d-Y", $startDate) . "<br>";

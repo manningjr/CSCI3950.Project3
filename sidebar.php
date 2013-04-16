@@ -84,7 +84,7 @@
             <option value='WY'>Wyoming</option>
             </select></td></tr>";
 
-	       echo   "<tr><td></td><td><button type='submit'>FETCH</button><button type='Reset'>Reset</button></td></tr>";
+	       echo   "<tr><td></td><td><button type='submit' name='submit1' value='submit1'>FETCH</button><button type='Reset'>Reset</button></td></tr>";
 
       echo "</table>";
    echo "</form>";
@@ -169,8 +169,8 @@
               <option value='WY'>Wyoming</option>
               </select></td></tr>";
 
-	         echo   "<tr><td></td><td><button type='submit'>FETCH</button><button type='Reset'>Reset</button></td></tr>";
-           
+	         echo   "<tr><td></td><td><button type='submit' name='submit2' value='submit2'>FETCH</button><button type='Reset'>Reset</button></td></tr>";
+
         echo "</table>";
    echo "</form>";
  ?>
