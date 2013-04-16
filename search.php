@@ -72,10 +72,18 @@
 		echo "End query date: " . date("m-d-Y", $endDate) . "<br>";
 
 
+
+
+
+		else
+		{
+			header("LOCATION: index.php?error=1");
+		}
+
 	}
 
 
-	if (isset($post['submit2']))
+	else if (isset($post['submit2']))
 	{
 		echo "<br><br>";
 

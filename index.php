@@ -10,6 +10,8 @@
 <?php
 ini_set('display_errors', 1);
 include("sidebarJquery.php");
+
+  
 ?>
 
 <?php
@@ -105,6 +107,8 @@ include("login.php");
 <!--Sidebar-->
 <?php
 include("sidebar.php");
+
+
 ?>
 <!--End of Sidebar-->
 
@@ -112,3 +116,14 @@ include("sidebar.php");
   <!-- end .background--></div>
   </body>
 </html>
+
+<?php
+
+if (isset($_GET['error']) && $_GET['error'] == 1)
+  {
+    echo "<script type='text/javascript'>";
+    echo "alert('Please fill in all the required search fields and try again.');";
+    echo "</script>";
+  }
+
+  ?>
