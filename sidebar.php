@@ -11,10 +11,10 @@
 
           echo "<tr><td>Breed:</td><td><input type = 'text' name = 'breed' /></td></tr>";
 
-          echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' /></td></tr>";
+          echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' placeholder='  Optional' /></td></tr>";
 
-          echo "<tr><td>Sex:</td><td><select name='sex'> 
-            <option value='' selected='selected'>Select</option> 
+          echo "<tr><td>Gender:</td><td><select name='sex'> 
+            <option value='' selected='selected'>Select gender</option> 
             <option value='male'>Male</option> 
             <option value='female'>Female</option>
             </select></td></tr>";
@@ -30,7 +30,7 @@
             </select></td></tr>";
    
           echo "<tr><td>Location:</td><td><select name='state'> 
-            <option value='' selected='selected'>Select</option> 
+            <option value='' selected='selected'>Select a location</option> 
             <option value='AL'>Alabama</option> 
             <option value='AK'>Alaska</option> 
             <option value='AZ'>Arizona</option> 
@@ -102,20 +102,21 @@
         
         echo "<table>";
             echo "<tr><td>Size:</td><td><select name='size'> 
-              <option value='' selected='selected'>Select</option> 
+              <option value='' selected='selected'>Select size</option> 
               <option value='small'>Small</option> 
               <option value='average'>Average</option>
               <option value='large'>Large</option>
               </select></td></tr>";
+              
             echo "<tr><td>Upkeep:</td><td><select name='upkeep'> 
-              <option value='' selected='selected'>Between</option> 
+              <option value='' selected='selected'>Select preference</option> 
               <option value='easy'>Easy</option> 
               <option value='average'>Average</option> 
               <option value='no'>No Preference</option>
               </select></td></tr>";
 
             echo "<tr><td>Location:</td><td><select name='state'> 
-              <option value='' selected='selected'>Select</option> 
+              <option value='' selected='selected'>Select a location</option> 
               <option value='AL'>Alabama</option> 
               <option value='AK'>Alaska</option> 
               <option value='AZ'>Arizona</option> 
