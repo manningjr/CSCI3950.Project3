@@ -119,11 +119,11 @@ include("sidebar.php");
 
 <?php
 
-if (isset($_GET['error']) && $_GET['error'] == 1)
+  if (isset($_GET['error']) && $_GET['error'] == 1)
   {
     echo "<script type='text/javascript'>";
     echo "alert('Please fill in all the required search fields and try again.');";
     echo "</script>";
   }
 
-  ?>
+?>
