@@ -37,7 +37,7 @@ if($count==1){
 
 $_SESSION['myusername'] = $myusername;
 
-header("location:home.php");
+header("location:index.php");
 }
 else {
 echo "Wrong Username or Password";
