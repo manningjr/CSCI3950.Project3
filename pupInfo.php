@@ -50,11 +50,12 @@
      <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
      </div>
       
-       <div class="puppic">
-    <img src="img/puppic/11.jpg" alt="Demo image" id="11" />
-      </div>
      
      <div class="pupInfo">
+      
+         <div class="puppic">
+    	<?php echo"<img src='img/puppic/11.jpg' alt='Demo image' id='11' />"; ?>
+      </div>
       
     <?php
 
