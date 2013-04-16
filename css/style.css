@@ -23,9 +23,9 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	padding-left: 35px;
-	padding-right: 60px;
+	padding-right: 100px;
 	margin-top: 55px;
-	margin-left: 180px;
+	margin-left: 140px;
 	border: thin solid rgb(0,0,0);
 	-moz-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
 	-webkit-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
@@ -50,8 +50,8 @@ body {
 	padding-bottom: 20px;
 	padding-left: 25px;
 	margin-top: 55px;
-	margin-left: 180px;
-	z-index: 3;
+	margin-left: 140px;
+	z-index: 4;
 }
 
 li
@@ -73,7 +73,7 @@ li
 
 .logo{
 	position:relative;
-	z-index:2;
+	z-index:3;
 	}
 
 .content{
@@ -93,7 +93,7 @@ li
 	-khtml-border-radius: 5px;
 	border-radius: 5px;
 	position:relative;
-	z-index:1;
+	z-index:2;
 	}
 
 .title{
@@ -130,6 +130,7 @@ li
 	color: #999;
 }
 
+/*Sidebar*/
 .toggle{
 	position: absolute;
 	background-color: rgb(121,146,223);
@@ -183,6 +184,7 @@ border: thin solid rgb(0,0,0);
 	border-radius: 0px 15px 15px 0px;
 	z-index: 6;
 }
+/*End of Sidebar*/
 
 table {
 color:rgb(255,255,255);
@@ -216,3 +218,84 @@ a:hover, a:active, a:focus {
 	text-decoration: none;
 	color: #000000;
 }
+
+/*Login*/
+
+.toggle2{
+	position:absolute;
+	margin-left: 990px;
+	margin-top: -121px;
+	float:right;
+	background-color: rgb(121,146,223);
+	height: 40px;
+	width: 100px;
+	border: thin solid rgb(0,0,0);
+	border-bottom: none;
+	-moz-box-shadow: -1px 0 0px 3px rgba(100, 100, 100, 0.8);
+	-webkit-box-shadow: -1px 0 0px 3px rgba(100, 100, 100, 0.8);
+	box-shadow: -1px 0 0px 3px rgba(100, 100, 100, 0.8);
+	-moz-border-radius: 15px 15px 0px 0px;
+	-webkit-border-radius: 15px 15px 0px 0px;
+	-khtml-border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
+	cursor:pointer;
+	z-index: 1;
+	}
+	
+	.toggle2-letters{
+	position:absolute;
+	margin-left: 990px;
+	margin-top: -130px;
+	float:right;
+	height: 40px;
+	width: 100px;
+	cursor:pointer;
+	z-index: 4;
+	text-align:center;
+	color:rgb(255,255,255);
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+	
+.toggle2-letters:hover{
+	position:absolute;
+	margin-left: 990px;
+	margin-top: -130px;
+	float:right;
+	height: 40px;
+	width: 100px;
+	color: rgb(0,0,0);
+	-moz-border-radius: 15px 15px 0px 0px;
+	-webkit-border-radius: 15px 15px 0px 0px;
+	-khtml-border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
+	cursor: pointer;
+	z-index: 4;
+	}
+
+.hiddenDivLogin{
+margin-left: 807px;
+top: 130px;
+position:absolute;
+color:rgb(255,255,255);
+display:none;
+background-color: rgb(121,146,223);
+float:right;
+border:#030 1px solid;
+height: 325px;
+width: 260px;
+padding: 0px 15px 0px 15px;
+border: thin solid rgb(0,0,0);
+-moz-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+-webkit-box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+box-shadow: 0 0 0px 3px rgba(100, 100, 100, 0.8);
+-moz-border-radius: 15px 0px 15px 15px;
+-webkit-border-radius: 15px 0px 15px 15px;
+-khtml-border-radius: 15px 0px 15px 15px;
+border-radius: 15px 0px 15px 15px;
+z-index: 6;
+}
+
+
+
+/*End of Login*/

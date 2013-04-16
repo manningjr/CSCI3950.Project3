@@ -12,6 +12,11 @@ ini_set('display_errors', 1);
 include("sidebarJquery.php");
 ?>
 
+<?php
+ini_set('display_errors', 1);
+include("loginJquery.php");
+?>
+
 </head>
 
 <body>
@@ -19,6 +24,10 @@ include("sidebarJquery.php");
 
 <?php
 include("navBar.php");
+?>
+
+<?php
+include("login.php");
 ?>
 
   <div class="content">
@@ -103,12 +112,3 @@ include("sidebar.php");
   <!-- end .background--></div>
   </body>
 </html>
-<?php
-
-/*
- * Project 3 
- *
- * 
- *
- *
- */

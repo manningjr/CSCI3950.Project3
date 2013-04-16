@@ -17,6 +17,11 @@
       include("sidebarJquery.php");
       require("database/database.php");
     ?>
+    
+    <?php
+ini_set('display_errors', 1);
+include("loginJquery.php");
+?>
 
   </head>
 
@@ -27,13 +32,13 @@
   <body>
     <div class="container">
 
-      <?php
-        
+      <?php      
           include("navBar.php");
-
-
-
       ?>
+
+	<?php
+		include("login.php");
+	?>
 
         <div class="contentProfile">
 
