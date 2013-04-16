@@ -29,6 +29,7 @@
 
       <?php
         include("navBar.php");
+        require("login.php");
       ?>
 
         <div class="contentProfile">
