@@ -53,34 +53,9 @@ echo"<p><h3> Register</h3>";
             </tr>
             
             <tr>
-            	<td><a href='#'><u>forgot password</u>&nbsp;</a></td>
+            	<td><a href='#'><u>Forgot Password</u>&nbsp;</a></td>
+                <td><a href='#'><u>Register</u>&nbsp;</a></td>
             </tr>
-            
-            </table
-            	
-        </form>
-    </table>
-    
-    <h3>Register</h3>
-    <table border="0">
-    	<form method="post" action="loginproc.php">
-        	
-            <tr>
-            	<td>Username: </td>
-                <td><input type="text" name="username" size="20"/></td>
-            </tr>
-            
-            <tr>
-            	<td>Password: </td>
-                <td><input type="text" name="password" size="20"/></td>
-            </tr>
-            
-            <tr>
-            	<td>Verify Password: </td>
-                <td><input type="text" name="verifypassword" size="20"/></td>
-            </tr>
-            
-            </table
             	
         </form>
     </table>
