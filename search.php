@@ -1,5 +1,6 @@
 <?php
 	
+
 	$post = $_POST;
 
 	print_r($post);
@@ -123,7 +124,6 @@
 
 	$endDate = mktime(0,0,0,date("m"),date("d")-$startAge,date("Y"));		// Gets the end date for query range
 	echo "End query date is " . date("m-d-Y", $endDate) . "<br>";
-
 
 
 
