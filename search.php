@@ -72,17 +72,47 @@
 
 
 
+			$database = database_connect();
+
+			$q1 = "SELECT * FROM `puppies`";
+
+			$blah = mysql_query($q1);
 
 
+			while($puppy = mysql_fetch_assoc($blah))
+			{
+				$puppy_id = $puppy['puppy_id'];   // Keep as hidden field on image links to pupInfo. Then we can just send this field with the link and query for the correct id on pupInfo.php
+				$pupName = $puppy['name'];
+				$breed = $puppy['breed'];
+				$birthday = $puppy['birthday'];
+				$sex = $puppy['sex'];
+				if ($puppy['vaccination'] == 1)
+					$vaccin = "Yes";
+				else
+					$vaccin = "No";
+				$price = $puppy['price'];
+				$location = $puppy['location'];
+				$img = $puppy['img_name'];
 
+				$puppies[] = $puppy;  //Stores info into puppies[] for potential use later. May not be necessary.
 
+				echo "<div class='puppic'>";
+					echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image'/></a>";
+				echo "</div>";
 
+				echo "<div class='puppy-list'>";
+					echo "<table>";
+						echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
+						echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
+						echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
+						echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
+						echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
+						echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
+						echo "<tr><td>Location:</td><td><b>$location</b></td></tr>";
+					echo "</table>";
+				echo "</div>";
 
-
-
-
-
-
+			}
 
 
 
@@ -115,15 +145,47 @@
 
 
 
+			$database = database_connect();
+
+			$q1 = "SELECT * FROM `puppies`";
+
+			$blah = mysql_query($q1);
 
 
+			while($puppy = mysql_fetch_assoc($blah))
+			{
+				$puppy_id = $puppy['puppy_id'];   // Keep as hidden field on image links to pupInfo. Then we can just send this field with the link and query for the correct id on pupInfo.php
+				$pupName = $puppy['name'];
+				$breed = $puppy['breed'];
+				$birthday = $puppy['birthday'];
+				$sex = $puppy['sex'];
+				if ($puppy['vaccination'] == 1)
+					$vaccin = "Yes";
+				else
+					$vaccin = "No";
+				$price = $puppy['price'];
+				$location = $puppy['location'];
+				$img = $puppy['img_name'];
 
+				$puppies[] = $puppy;  //Stores info into puppies[] for potential use later. May not be necessary.
 
+				echo "<div class='puppic'>";
+					echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image'/></a>";
+				echo "</div>";
 
+				echo "<div class='puppy-list'>";
+					echo "<table>";
+						echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
+						echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
+						echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
+						echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
+						echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
+						echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
+						echo "<tr><td>Location:</td><td><b>$location</b></td></tr>";
+					echo "</table>";
+				echo "</div>";
 
-
-
-
+			}
 
 
 		}
