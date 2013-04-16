@@ -106,11 +106,7 @@ include("loginJquery.php");
     ?>
     </div>  
 
-    <div class="favorite">
-    <a href="pupInfo.php" class="button" style="top: 236px; left: 199px;">Add To Favorite</a>
-
-    <a href="pupInfo.php" class="button" style="top: 236px; left: 199px;">See Favorites</a>
-    </div>
+    
 
       <div class="footer">
       <hr/>

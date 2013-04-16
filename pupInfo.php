@@ -101,6 +101,8 @@
     <a href="pupInfo.php" class="button" style="top: 236px; left: 199px;">See Favorites</a>
     </div>
 
+
+    
       <div class="footer">
       <hr/>
          <p>Project 3 Designed by the A-Team. Copyright &copy; 2013.</p>
