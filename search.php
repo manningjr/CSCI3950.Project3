@@ -75,6 +75,36 @@
 		}
 	}
 
+	if ($age == "0-1")	// If the age is from 0-1 weeks
+	{
+		$startAge = 0;	// Get beginning date (in days) for subtraction from time stamp to get rang of dates
+		$endAge = 7;	// Get end date (in days) for subtraction from time stamp to get rang of dates
+	}
+	if ($age == "1-4")	// If age is from 1-4 weeks
+	{
+		$startAge = 7;	// Get range in days
+		$endAge = 28;
+	}
+	if ($age == "4-3m") // Repeat for all ages
+	{
+		$startAge = 28;
+		$endAge = 91;
+	}
+	if ($age == "3m-6m")
+	{
+		$startAge = 91;
+		$endAge = 182;
+	}
+	if ($age == "6m-1a")
+	{
+		$startAge = 182;
+		$endAge = 365;
+	}
+	if ($age == "1a-more")
+	{
+		$startAge = 365;
+	}
+
 
 	echo "<br><br>";
 	echo "Breed: " . $breed . "<br>";
@@ -82,6 +112,8 @@
 	echo "Sex: " . $sex . "<br>";
 	echo "Age: " . $age . "<br>";
 	echo "Location: " . $location . "<br>";
+	echo "Start: " . $startAge . "<br>";
+	echo "End: " . $endAge . "<br>";
 
 
 
