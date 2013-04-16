@@ -19,7 +19,7 @@
 		$age = $post['age'];
 		$location = $post['state'];
 
-		$location = functions->setState($location);
+		$location = setState($location);
 
 		if ($age == "0-1")	// If the age is from 0-1 weeks
 		{
@@ -86,13 +86,13 @@
 		$location = $post['state'];
 
 
-		$location = functions->setState($location);
+		$location = setState($location);
 
 
 		echo "Size: " . $size . "<br>";
 		echo "Upkeep: " . $upkeep . "<br>";
 		echo "Location: " . $location . "<br>";
-
+	}
 
 
 
