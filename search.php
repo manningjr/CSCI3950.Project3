@@ -85,7 +85,7 @@
 
 
 
-	$query = "SELECT * FROM `puppies` WHERE 
+	$query = "SELECT * FROM `puppies` WHERE ";
 
 
 
