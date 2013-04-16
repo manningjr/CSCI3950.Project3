@@ -51,8 +51,7 @@ include("loginJquery.php");
      <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
      </div>
     
-<div class="login">   
-    <h3>Register</h3>
+<div class="login">
     <table border="0">
     	<form method="post" action="loginproc.php">
         	
@@ -70,7 +69,57 @@ include("loginJquery.php");
             	<td>Verify Password: </td>
                 <td><input type="text" name="verifypassword" size="20"/></td>
             </tr>
-            	
+            <br>
+            <tr>
+            	<td>Name: </td>
+                <td><input type="text" name="name" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>E-mail: </td>
+                <td><input type="text" name="verifypassword" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>Company: </td>
+                <td><input type="text" name="company" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>Card Number: </td>
+                <td><input type="text" name="card_number" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>Security Code: </td>
+                <td><input type="text" name="security_code" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>Street: </td>
+                <td><input type="text" name="street" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>Apartment: </td>
+                <td><input type="text" name="apartment" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>City: </td>
+                <td><input type="text" name="city" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>State: </td>
+                <td><input type="text" name="state" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>Zip: </td>
+                <td><input type="text" name="verifypassword" size="20"/></td>
+            </tr>
+     
         </form>
     </table>
 </div>
