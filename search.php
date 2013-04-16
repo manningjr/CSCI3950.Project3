@@ -10,6 +10,8 @@
 	$age = $post['age'];
 	$location = $post['state'];
 
+	$currentDate = date("m-d-y");	// Get current date
+
 
 	$states = array(
 
@@ -71,7 +73,7 @@
 	{
 		if($location == $abbrev)
 		{
-			$location = $state;
+			$location = $state;		// Set the acronym to the corresponding state
 		}
 	}
 
@@ -95,12 +97,12 @@
 		$startAge = 91;
 		$endAge = 182;
 	}
-	if ($age == "6m-1a")
+	if ($age == "6m-1y")
 	{
 		$startAge = 182;
 		$endAge = 365;
 	}
-	if ($age == "1a-more")
+	if ($age == "1y-more")
 	{
 		$startAge = 365;
 	}
@@ -114,6 +116,14 @@
 	echo "Location: " . $location . "<br>";
 	echo "Start: " . $startAge . "<br>";
 	echo "End: " . $endAge . "<br>";
+	echo date("m-d-y") . "<br>";
+
+	$startDate = mktime(0,0,0,date("m"),date("d")-$endAge,date("Y"));		// Gets the beginning date for query range
+	echo "Beginning query date is " . date("m-d-Y", $startDate) . "<br>";
+
+	$endDate = mktime(0,0,0,date("m"),date("d")-$startAge,date("Y"));		// Gets the end date for query range
+	echo "End query date is " . date("m-d-Y", $endDate) . "<br>";
+
 
 
 

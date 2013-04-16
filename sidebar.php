@@ -20,8 +20,8 @@ echo"<p><h3> Select Your Puppy By</h3>";
 <option value='1-4'>1 week to 4 weeks</option> 
 <option value='4-3m'>4 weeks to 3 months</option>
 <option value='3m-6m'>3 months to 6 months</option>
-<option value='6m-1a'>6 months to 1 year</option>
-<option value='1a-more'>Older than a year</option>
+<option value='6m-1y'>6 months to 1 year</option>
+<option value='1y-more'>Older than a year</option>
 </select></td></tr>";
    
    echo "<tr><td>Location:</td><td><select name='state'> 
