@@ -89,7 +89,7 @@
 		}
 		else
 		{
-			header("LOCATION: index.php?error=1");
+			header("LOCATION: index.php?error=1");	// Send to index and print an error
 		}
 
 	}
@@ -129,7 +129,7 @@
 		}
 		else
 		{
-			header("LOCATION: index.php?error=1");
+			header("LOCATION: index.php?error=1");	// Send to index and print an error
 		}
 	}
 

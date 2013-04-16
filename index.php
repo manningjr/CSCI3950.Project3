@@ -42,16 +42,16 @@ include("login.php");
   <div id="makeMeScrollable">
 		<img src="img/puppic/1.jpg" alt="Demo image" id="1" />
 		<img src="img/puppic/2.jpg" alt="Demo image" id="2" />
-        <img src="img/puppic/3.jpg" alt="Demo image" id="3" />
-        <img src="img/puppic/4.jpg" alt="Demo image" id="4" />
-        <img src="img/puppic/5.jpg" alt="Demo image" id="5" />
-        <img src="img/puppic/6.jpg" alt="Demo image" id="6" />
-        <img src="img/puppic/7.jpg" alt="Demo image" id="7" />
-        <img src="img/puppic/8.jpg" alt="Demo image" id="8" />
-        <img src="img/puppic/9.jpg" alt="Demo image" id="9" />
-        <img src="img/puppic/10.jpg" alt="Demo image" id="10" />
-        <img src="img/puppic/11.jpg" alt="Demo image" id="11" />
-        <img src="img/puppic/12.jpg" alt="Demo image" id="12" />
+    <img src="img/puppic/3.jpg" alt="Demo image" id="3" />
+    <img src="img/puppic/4.jpg" alt="Demo image" id="4" />
+    <img src="img/puppic/5.jpg" alt="Demo image" id="5" />
+    <img src="img/puppic/6.jpg" alt="Demo image" id="6" />
+    <img src="img/puppic/7.jpg" alt="Demo image" id="7" />
+    <img src="img/puppic/8.jpg" alt="Demo image" id="8" />
+    <img src="img/puppic/9.jpg" alt="Demo image" id="9" />
+    <img src="img/puppic/10.jpg" alt="Demo image" id="10" />
+    <img src="img/puppic/11.jpg" alt="Demo image" id="11" />
+    <img src="img/puppic/12.jpg" alt="Demo image" id="12" />
 	</div>
   
 <!-- jQuery library - Please load it from Google API's -->
@@ -119,6 +119,7 @@ include("sidebar.php");
 
 <?php
 
+  // Prints an error if they try to search for a puppy and do not fill out all the necessary fields
   if (isset($_GET['error']) && $_GET['error'] == 1)
   {
     echo "<script type='text/javascript'>";
