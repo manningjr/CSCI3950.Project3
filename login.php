@@ -61,4 +61,27 @@ echo"<p><h3> Register</h3>";
     </table>
  </div>
  
+  <div class="admin">
+ 	<h3>Administrator</h3>
+    <table border="0">
+    	<form method="post" action="loginproc.php">
+        	
+            <tr>
+            	<td>Username: </td>
+                <td><input type="text" name="username" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td>Password: </td>
+                <td><input type="text" name="password" size="20"/></td>
+            </tr>
+            
+            <tr>
+            	<td><a href='#'><u>Forgot Password</u>&nbsp;</a></td>
+            </tr>
+            	
+        </form>
+    </table>
+ </div>
+ 
 </div>
