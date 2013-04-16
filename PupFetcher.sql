@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.5.7
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2013 at 03:39 AM
--- Server version: 5.5.25
--- PHP Version: 5.4.4
+-- Generation Time: Apr 16, 2013 at 06:37 AM
+-- Server version: 5.5.29
+-- PHP Version: 5.4.10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `PupFetcher`
 --
-CREATE DATABASE `PupFetcher` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `PupFetcher`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order`
+--
+
+CREATE TABLE `order` (
+  `order_id` int(10) NOT NULL AUTO_INCREMENT,
+  `puppy_id` varchar(10) NOT NULL,
+  `order_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -47,6 +58,29 @@ CREATE TABLE `puppies` (
 INSERT INTO `puppies` (`puppy_id`, `name`, `breed`, `sex`, `birthday`, `location`, `price`, `vaccination`, `img_name`) VALUES
 (1, 'Turk', 'Lab', 'Male', '03-02-2013\n', 'Oregon', '\n999', 1, 'img/puppic/\n11.jpg'),
 (2, 'Buddy', 'Golden Retriever', 'Male', '04-10-2013', 'Florida', '\n1099', 1, 'img/puppic/\n2.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `member_id` int(4) NOT NULL AUTO_INCREMENT,
+  `username` varchar(65) NOT NULL,
+  `password` varchar(65) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `company` varchar(15) NOT NULL,
+  `card_number` int(16) NOT NULL,
+  `security_code` int(3) NOT NULL,
+  `street` varchar(150) NOT NULL,
+  `apt` int(10) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `state` varchar(15) NOT NULL,
+  `zip` varchar(5) NOT NULL,
+  PRIMARY KEY (`member_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
