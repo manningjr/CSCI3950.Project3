@@ -23,6 +23,7 @@
 
 .puppic{
  	float:left;
+ 	margin-right: 30px;
  	-moz-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);
 	-webkit-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);
 	box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);

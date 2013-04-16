@@ -34,30 +34,7 @@
         <div class="contentProfile">
   
 
-
-
-
-
-          <div class="title">
-            Pup Profile
-           </div>
-
-
-  
-     <div class="paws">
-     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
-     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
-     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
-     </div>
-      
-     
-     <div class="pupInfo">
-      
-         <div class="puppic">
-    	<?php echo"<img src='img/puppic/11.jpg' alt='Demo image' id='11' />"; ?>
-      </div>
-      
-    <?php
+          <?php
 
             $database = database_connect();
 
@@ -78,8 +55,33 @@
                 $vaccin = "No";
               $price = $puppy['price'];
               $location = $puppy['location'];
+              $img = $puppy['img_name'];
             }
-    
+
+          ?>
+
+
+
+          <div class="title">
+            Pup Profile
+           </div>
+
+
+  
+     <div class="paws">
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     </div>
+      
+     
+     <div class="pupInfo">
+      
+         <div class="puppic">
+    	<?php echo"<img src='$img' alt='Demo image' id='11' />"; ?>
+      </div>
+      
+    <?php
 
             echo "<table>";
             echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
