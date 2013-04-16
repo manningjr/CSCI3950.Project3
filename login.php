@@ -23,6 +23,9 @@ ini_set('display_errors', 1);
                     <td><input type="text" name="password" size="20"/></td>
                 </tr>
                 
+                <tr><td>&nbsp;</td><td>&nbsp;</td><td><input type="submit"
+                            name="Submit" value="Login">
+                
                 <tr>
                     <td><a href='#'><u>Forgot Password</u>&nbsp;</a></td>
                     <td><a href="register.php" target="_blank"><u>Register</u>&nbsp;</a></td>
