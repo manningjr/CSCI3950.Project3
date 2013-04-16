@@ -38,7 +38,7 @@
 
             $database = database_connect();
 
-            $q1 = "SELECT * FROM `puppies`";
+            $q1 = "SELECT * FROM `puppies` WHERE `puppy_id`=" . $_GET['id'];
 
             $blah = mysql_query($q1);
 

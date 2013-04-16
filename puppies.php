@@ -86,7 +86,7 @@ include("loginJquery.php");
         $puppies[] = $puppy;  //Stores info into puppies[] for potential use later. May not be necessary.
 
         echo "<div class='puppic'>";
-          echo"<img src='$img' alt='Puppy image'/>";
+          echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image'/></a>";
         echo "</div>";
         
         echo "<div class='puppy-list'>";

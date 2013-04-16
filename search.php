@@ -1,4 +1,5 @@
 <?php
+
 	ini_set('display_errors', 1);
 
 	include('functions/functions.php');
@@ -70,9 +71,6 @@
 		$endDate = mktime(0,0,0,date("m"),date("d")-$startAge,date("Y"));		// Gets the end date for query range
 		echo "End query date: " . date("m-d-Y", $endDate) . "<br>";
 
-
-
-		$query = "SELECT * FROM `puppies` WHERE ";
 
 	}
 
