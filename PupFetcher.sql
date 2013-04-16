@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2013 at 12:37 AM
+-- Generation Time: Apr 16, 2013 at 03:39 AM
 -- Server version: 5.5.25
 -- PHP Version: 5.4.4
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `PupFetcher`
 --
+CREATE DATABASE `PupFetcher` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `PupFetcher`;
 
 -- --------------------------------------------------------
 
@@ -43,7 +45,8 @@ CREATE TABLE `puppies` (
 --
 
 INSERT INTO `puppies` (`puppy_id`, `name`, `breed`, `sex`, `birthday`, `location`, `price`, `vaccination`, `img_name`) VALUES
-(1, 'Turk', 'Lab', 'Male', '03-02-2013\n', 'Oregon', '\n999', 1, 'img/puppic/\n11.jpg');
+(1, 'Turk', 'Lab', 'Male', '03-02-2013\n', 'Oregon', '\n999', 1, 'img/puppic/\n11.jpg'),
+(2, 'Buddy', 'Golden Retriever', 'Male', '04-10-2013', 'Florida', '\n1099', 1, 'img/puppic/\n2.jpg');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
