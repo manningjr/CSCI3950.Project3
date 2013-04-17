@@ -4,10 +4,7 @@ session_start();
 
 ini_set('display_errors',1);
 
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password="root"; // Mysql password 
-$db_name="PupFetcher"; // Database name 
+include(database/database.php);
 $tbl_name="user"; // Table name 
 
 // Connect to server and select databse.
