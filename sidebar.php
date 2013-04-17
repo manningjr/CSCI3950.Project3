@@ -8,31 +8,37 @@
 
   $database = database_connect();
 
-  $q1 = "SELECT `breed` FROM `puppies`";
+  //$q1 = "SELECT `breed` FROM `puppies`";
 
-  $blah = mysql_query($q1);
+  //$blah = mysql_query($q1);
 
-  $breeds = array();
+  //$breeds = array();
 
-  while ($puppy = mysql_fetch_assoc($blah))
-  {
-    $breeds[] = $puppy['breed'];
-  }
+  //while ($puppy = mysql_fetch_assoc($blah))
+  //{
+   // $breeds[] = $puppy['breed'];
+  //}
 
-  print_r($breeds);
+  //print_r($breeds);
 
+
+$sql="SELECT breed FROM puppies ORDER BY breed ASC"; 
+$result=mysql_query($sql); 
+$options=""; 
+while ($row=mysql_fetch_array($result)) { 
+    //$id=$row["campus_id"]; 
+    $breed=$row["breed"]; 
+    $options.="<OPTION VALUE=\"$breed\">" .$breed; 
+} 
 
   echo"<p><h3> Select Your Puppy By</h3>";
     echo "<form action='search.php' method='post'>";
        echo "<table>";
 
-          echo "<tr><td>Breed:</td><td><select name = 'breed'>
-          <option value='' selected='selected'>Select breed</option>" .
-            // foreach ($breeds as $key=>$value)
-            // { .
-             // "<option value='". $value. "'>". $value . "</option>" .
-            // } .
-         "</select></td></tr>";
+          echo "<tr><td>Breed:</td><td><select name = 'breed'>";
+			echo"<OPTION VALUE=0>Select a Breed ";
+			echo"$options ";
+			echo"</SELECT> ";
 
           echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' placeholder='  Optional' /></td></tr>";
 
