@@ -104,8 +104,9 @@
             echo "<tr><td>Size:</td><td><select name='size'> 
               <option value='' selected='selected'>Select size</option> 
               <option value='small'>Small</option> 
-              <option value='average'>Average</option>
+              <option value='average'>Medium</option>
               <option value='large'>Large</option>
+              <option value='extra large'>Extra Large</option>
               </select></td></tr>";
               
             echo "<tr><td>Upkeep:</td><td><select name='upkeep'> 
