@@ -18,6 +18,11 @@
       require("database/database.php");
     ?>
 
+<?php
+ini_set('display_errors', 1);
+include("loginJquery.php");
+?>
+
   </head>
 
 
@@ -104,12 +109,16 @@
             echo "</table>";
     ?>
     </div>  
-
-    <div class="favorite">
-    <a href="pupInfo.php?id=<?php echo $id; ?>" class="button" style="top: 236px; left: 199px;">Add To Favorite</a>
-
-    <a href="pupInfo.php?id=<?php echo $id; ?>" class="button" style="top: 236px; left: 199px;">See Favorites</a>
-    </div>
+	<?php
+	echo "<div class='previousButton'>";
+		echo "<a href='javascript:javascript:history.go(-1)'><img src='img/previous.png'/></a>";
+		echo "</div>";
+    echo "<div class='infoButtons3'>";
+		echo"<a href='#'> <img src='img/pupcart2.png'/></a>";
+		echo "</div>";
+	  	
+		
+    ?>
 
 
 
