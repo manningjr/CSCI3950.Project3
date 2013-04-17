@@ -4,12 +4,37 @@
 <div class="hiddenDiv">
 <?php
   ini_set('display_errors', 1);
+  require('database/database.php');
+
+  $database = database_connect();
+
+  $q1 = "SELECT `breed` FROM `puppies`";
+
+  $blah = mysql_query($q1);
+
+  $breeds = array();
+
+  while ($puppy = mysql_fetch_assoc($blah))
+  {
+    $breeds[] = $puppy['breed'];
+  }
+
+  $count = count($breeds);
+
+  print_r($breeds);
+
 
   echo"<p><h3> Select Your Puppy By</h3>";
     echo "<form action='search.php' method='post'>";
        echo "<table>";
 
-          echo "<tr><td>Breed:</td><td><input type = 'text' name = 'breed' /></td></tr>";
+          echo "<tr><td>Breed:</td><td><select name = 'breed'>
+          <option value='' selected='selected'>Select breed</option>" .
+            for ($i = 0; $i < $count; $i++)
+            {
+              "<option value='".$breeds[$i]."'>".$breeds[$i]."</option>" . 
+            }
+          "</select></td></tr>";
 
           echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' placeholder='  Optional' /></td></tr>";
 

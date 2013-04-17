@@ -64,6 +64,7 @@ include("loginJquery.php");
               $breed = $puppy['breed'];
               $birthday = $puppy['birthday'];
               $sex = $puppy['sex'];
+              $size = $puppy['size'];
               if ($puppy['vaccination'] == 1)
                 $vaccin = "Yes";
               else
@@ -102,6 +103,7 @@ include("loginJquery.php");
             echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
             echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
             echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
+            echo "<tr><td>Size:</td><td><b>$size</b></td></tr>";
             echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
             echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
             echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
