@@ -296,8 +296,14 @@ border-radius: 15px 0px 15px 15px;
 z-index: 6;
 }
 
-
-
-
-
 /*End of Login*/
+
+.title3{
+	color:rgb(255,255,255);
+		font-size:28px;
+}
+
+.about{
+	color: #999;
+	font-size:16px;
+}
