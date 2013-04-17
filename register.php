@@ -81,11 +81,6 @@ include("loginJquery.php");
             </tr>
             
             <tr>
-            	<td>Company: </td>
-                <td><input type="text" name="company" size="20"/></td>
-            </tr>
-            
-            <tr>
             	<td>Card Number: </td>
                 <td><input type="text" name="card_number" size="20"/></td>
             </tr>
