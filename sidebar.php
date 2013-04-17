@@ -4,32 +4,17 @@
 <div class="hiddenDiv">
 <?php
   ini_set('display_errors', 1);
-  require('database/database.php');
+  //require('database/database.php');
 
   $database = database_connect();
-
-  //$q1 = "SELECT `breed` FROM `puppies`";
-
-  //$blah = mysql_query($q1);
-
-  //$breeds = array();
-
-  //while ($puppy = mysql_fetch_assoc($blah))
-  //{
-   // $breeds[] = $puppy['breed'];
-  //}
-
-  //print_r($breeds);
-
 
 $sql="SELECT breed FROM puppies ORDER BY breed ASC"; 
 $result=mysql_query($sql); 
 $options=""; 
 while ($row=mysql_fetch_array($result)) { 
-    //$id=$row["campus_id"]; 
     $breed=$row["breed"]; 
     $options.="<OPTION VALUE=\"$breed\">" .$breed; 
-} 
+	} 
 
   echo"<p><h3> Select Your Puppy By</h3>";
     echo "<form action='search.php' method='post'>";
