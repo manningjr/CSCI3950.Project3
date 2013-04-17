@@ -19,8 +19,6 @@
     $breeds[] = $puppy['breed'];
   }
 
-  $count = count($breeds);
-
   print_r($breeds);
 
 
@@ -30,11 +28,11 @@
 
           echo "<tr><td>Breed:</td><td><select name = 'breed'>
           <option value='' selected='selected'>Select breed</option>" .
-            for ($i = 0; $i < $count; $i++)
-            {
-              "<option value='".$breeds[$i]."'>".$breeds[$i]."</option>" . 
-            }
-          "</select></td></tr>";
+            // foreach ($breeds as $key=>$value)
+            // { .
+             // "<option value='". $value. "'>". $value . "</option>" .
+            // } .
+         "</select></td></tr>";
 
           echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' placeholder='  Optional' /></td></tr>";
 
