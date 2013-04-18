@@ -15,13 +15,9 @@
     <?php
       ini_set('display_errors', 1);
       include("sidebarJquery.php");
-      require("database/database.php");
+      include("database/database.php");
+      include("loginJquery.php");
     ?>
-    
-    <?php
-ini_set('display_errors', 1);
-include("loginJquery.php");
-?>
 
   </head>
 

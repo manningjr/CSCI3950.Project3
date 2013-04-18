@@ -1,85 +1,120 @@
-<?php
+</html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Puppies</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pupInfo.css">
+    <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+   
+
+
+   <?php
 
 	ini_set('display_errors', 1);
 
+	include("sidebarJquery.php");
+	include("loginJquery.php");
 	include('functions/functions.php');
 	include('database/database.php');
+	?>
+
+  </head>
 
 
 
-	$post = $_POST;
+  <body>
+    <div class="container">
 
-	if (isset($post['submit1']))
-	{
-		if (isset($post['breed']) && !empty($post['breed']) && isset($post['sex']) && !empty($post['sex']) && isset($post['age']) && !empty($post['age']) && isset($post['state']) && !empty($post['state']))
+      <?php      
+          include("navBar.php");
+      ?>
+
+	<?php
+		include("login.php");
+	?>
+
+        <div class="contentProfile">
+
+          <div class="title">
+            Search Results
+          </div>
+
+ 
+     <div class="paws">
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+     </div>
+      
+       
+     
+     <div class="puplist">
+
+	<?php 
+
+		$post = $_POST;
+
+		if (isset($post['submit1']))
 		{
+			if (isset($post['breed']) && !empty($post['breed']) && isset($post['sex']) && !empty($post['sex']) && isset($post['age']) && !empty($post['age']) && isset($post['state']) && !empty($post['state']))
+			{
 
-			$breed = $post['breed'];
-			$name = $post['pupName'];
-			$sex = $post['sex'];
-			$age = $post['age'];
-			$location = $post['state'];
+				$breed = $post['breed'];
+				$name = $post['pupName'];
+				$sex = $post['sex'];
+				$age = $post['age'];
+				$location = $post['state'];
 
-			$location = setState($location);
+				$location = setState($location);
 
-			if ($age == "0-1")	// If the age is from 0-1 weeks
-			{
-				$startAge = 0;	// Get beginning date (in days) for subtraction from time stamp to get rang of dates
-				$endAge = 7;	// Get end date (in days) for subtraction from time stamp to get rang of dates
-			}
-			if ($age == "1-4")	// If age is from 1-4 weeks
-			{
-				$startAge = 7;	// Get range in days
-				$endAge = 28;
-			}
-			if ($age == "4-3m") // Repeat for all ages
-			{
-				$startAge = 28;
-				$endAge = 91;
-			}
-			if ($age == "3m-6m")
-			{
-				$startAge = 91;
-				$endAge = 182;
-			}
-			if ($age == "6m-1y")
-			{
-				$startAge = 182;
-				$endAge = 365;
-			}
-			if ($age == "1y-more")
-			{
-				$startAge = 365;
-			}
-
-
-			echo "<br><br>";
-			echo "Breed: " . $breed . "<br>";
-			echo "Name: " . $name . "<br>";
-			echo "Sex: " . $sex . "<br>";
-			echo "Age: " . $age . "<br>";
-			echo "Location: " . $location . "<br>";
-			echo "Start: " . $startAge . " days before present<br>";
-			echo "End: " . $endAge . " days before present<br>";
+				if ($age == "0-1")	// If the age is from 0-1 weeks
+				{
+					$startAge = 0;	// Get beginning date (in days) for subtraction from time stamp to get rang of dates
+					$endAge = 7;	// Get end date (in days) for subtraction from time stamp to get rang of dates
+				}
+				if ($age == "1-4")	// If age is from 1-4 weeks
+				{
+					$startAge = 7;	// Get range in days
+					$endAge = 28;
+				}
+				if ($age == "4-3m") // Repeat for all ages
+				{
+					$startAge = 28;
+					$endAge = 91;
+				}
+				if ($age == "3m-6m")
+				{
+					$startAge = 91;
+					$endAge = 182;
+				}
+				if ($age == "6m-1y")
+				{
+					$startAge = 182;
+					$endAge = 365;
+				}
+				if ($age == "1y-more")
+				{
+					$startAge = 365;
+				}
 
 
 			$currentDate = date("m-d-y");	// Get current date
-			echo "Current date: " . date("m-d-y") . "<br>";
 
 			$startDate = mktime(0,0,0,date("m"),date("d")-$endAge,date("Y"));		// Gets the beginning date for query range
-			echo "Beginning query date: " . date("m-d-Y", $startDate) . "<br>";
-			$startDateFormatted = date("m-d-Y", $startDate);
+			$startDateFormatted = date("m-d-Y", $startDate);						// Formats date for query
+
 			$endDate = mktime(0,0,0,date("m"),date("d")-$startAge,date("Y"));		// Gets the end date for query range
-			echo "End query date: " . date("m-d-Y", $endDate) . "<br>";
-			$endDateFormatted = date("m-d-Y", $endDate);
+			$endDateFormatted = date("m-d-Y", $endDate);							// Formats date for query
 
 
 
 			$database = database_connect();
 
-			$q1 = "SELECT * FROM `puppies` WHERE `breed` = '" . $breed . "' AND `sex` = '" . $sex . "' AND `birthday` BETWEEN '" . $startDateFormatted . "' AND '" . $endDateFormatted . "'";
-
-			print_r($q1);
+			$q1 = "SELECT * FROM `puppies` WHERE `breed` = '" . $breed . "' AND `sex` = '" . $sex . "' AND 
+					`birthday` BETWEEN '" . $startDateFormatted . "' AND '" . $endDateFormatted . "'";
 
 			$blah = mysql_query($q1);
 
@@ -101,24 +136,31 @@
 
 				$puppies[] = $puppy;  //Stores info into puppies[] for potential use later. May not be necessary.
 
-				echo "<div class='puppic'>";
-					echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image'/></a>";
-				echo "</div>";
-
-				echo "<div class='puppy-list'>";
-					echo "<table>";
-						echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
-						echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
-						echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
-						echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
-						echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
-						echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
-						echo "<tr><td>Location:</td><td><b>$location</b></td></tr>";
-					echo "</table>";
-				echo "</div>";
+				echo "<hr>";
+        echo "<div class='puppic'>";
+          echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image' width='100' height='100'/></a>";
+        echo "</div>";
+        
+        echo "<div class='puppy-list'>";
+          echo "<table>";
+            echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
+            echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
+            echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
+            //echo "<tr><td>Size:</td><td><b>$size</b></td></tr>";
+            //echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
+            //echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
+            echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
+            //echo "<tr><td>Location:</td><td><b>$location</b></td></tr>";
+          echo "</table>";
+        echo "</div>";
+		echo "<div class='infoButtons2'>";
+		echo"<a href='pupInfo.php?id=" . $puppy_id . "'> <img src='img/profile.png'/></a>";
+		echo "</div>";
+		echo "<div class='infoButtons'>";
+		echo"<a href='#'> <img src='img/pupcart2.png'/></a>";
+		echo "</div>";
 
 			}
-
 
 
 		}
@@ -134,7 +176,6 @@
 	{
 		if (isset($post['size']) && !empty($post['size']) && isset($post['upkeep']) && !empty($post['upkeep']) && isset($post['state']) && !empty($post['state']))
 		{
-			echo "<br><br>";
 
 			$size = $post['size'];
 			$upkeep = $post['upkeep'];
@@ -142,12 +183,6 @@
 
 
 			$location = setState($location);
-
-
-			echo "Size: " . $size . "<br>";
-			echo "Upkeep: " . $upkeep . "<br>";
-			echo "Location: " . $location . "<br>";
-
 
 
 			$database = database_connect();
@@ -174,21 +209,29 @@
 
 				$puppies[] = $puppy;  //Stores info into puppies[] for potential use later. May not be necessary.
 
-				echo "<div class='puppic'>";
-					echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image'/></a>";
-				echo "</div>";
-
-				echo "<div class='puppy-list'>";
-					echo "<table>";
-						echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
-						echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
-						echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
-						echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
-						echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
-						echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
-						echo "<tr><td>Location:</td><td><b>$location</b></td></tr>";
-					echo "</table>";
-				echo "</div>";
+				echo "<hr>";
+        echo "<div class='puppic'>";
+          echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image' width='100' height='100'/></a>";
+        echo "</div>";
+        
+        echo "<div class='puppy-list'>";
+          echo "<table>";
+            echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
+            echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
+            echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
+            //echo "<tr><td>Size:</td><td><b>$size</b></td></tr>";
+            //echo "<tr><td>Birthday:</td><td><b>$birthday</b></td></tr>";
+            //echo "<tr><td>Vaccinated:</td><td><b>$vaccin</b></td></tr>";
+            echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
+            //echo "<tr><td>Location:</td><td><b>$location</b></td></tr>";
+          echo "</table>";
+        echo "</div>";
+		echo "<div class='infoButtons2'>";
+		echo"<a href='pupInfo.php?id=" . $puppy_id . "'> <img src='img/profile.png'/></a>";
+		echo "</div>";
+		echo "<div class='infoButtons'>";
+		echo"<a href='#'> <img src='img/pupcart2.png'/></a>";
+		echo "</div>";
 
 			}
 
@@ -200,7 +243,24 @@
 		}
 	}
 
-
-
-
 ?>
+
+
+
+			</div>
+		
+
+ <div class="footer">
+      <hr/>
+         <p>Project 3 Designed by the A-Team. Copyright &copy; 2013.</p>
+        <!-- end .footer --></div>
+      <!-- end .content --></div> 
+
+    <!--Sidebar-->
+    <?php
+    include("sidebar.php");
+    ?>
+<!-- end .container --></div>
+      <!-- end .background--></div>
+    </body>
+</html>
