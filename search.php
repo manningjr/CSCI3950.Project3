@@ -3,6 +3,7 @@
 	ini_set('display_errors', 1);
 
 	include('functions/functions.php');
+	include('database/database.php');
 
 
 
