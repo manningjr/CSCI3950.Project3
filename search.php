@@ -230,7 +230,7 @@
 		echo"<a href='pupInfo.php?id=" . $puppy_id . "'> <img src='img/profile.png'/></a>";
 		echo "</div>";
 		echo "<div class='infoButtons'>";
-		echo"<a href='#'> <img src='img/pupcart2.png'/></a>";
+		echo"<a href='pupKart.php'> <img src='img/pupcart2.png'/></a>";
 		echo "</div>";
 
 			}
