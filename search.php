@@ -68,14 +68,18 @@
 
 			$startDate = mktime(0,0,0,date("m"),date("d")-$endAge,date("Y"));		// Gets the beginning date for query range
 			echo "Beginning query date: " . date("m-d-Y", $startDate) . "<br>";
+			$startDateFormatted = date("m-d-Y", $startDate);
 			$endDate = mktime(0,0,0,date("m"),date("d")-$startAge,date("Y"));		// Gets the end date for query range
 			echo "End query date: " . date("m-d-Y", $endDate) . "<br>";
+			$endDateFormatted = date("m-d-Y", $endDate);
 
 
 
 			$database = database_connect();
 
-			$q1 = "SELECT * FROM `puppies`";
+			$q1 = "SELECT * FROM `puppies` WHERE `breed` = '" . $breed . "' AND `sex` = '" . $sex . "' AND `birthday` BETWEEN '" . $startDateFormatted . "' AND '" . $endDateFormatted . "'";
+
+			print_r($q1);
 
 			$blah = mysql_query($q1);
 
@@ -148,7 +152,7 @@
 
 			$database = database_connect();
 
-			$q1 = "SELECT * FROM `puppies`";
+			$q1 = "SELECT * FROM `puppies` WHERE `size` = '" . $size . "'";
 
 			$blah = mysql_query($q1);
 

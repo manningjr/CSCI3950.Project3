@@ -25,12 +25,12 @@ while ($row=mysql_fetch_array($result)) {
 			echo"$options ";
 			echo"</SELECT> ";
 
-          echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' placeholder='  Optional' /></td></tr>";
+          echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' placeholder=' Optional' /></td></tr>";
 
           echo "<tr><td>Gender:</td><td><select name='sex'> 
             <option value='' selected='selected'>Select gender</option> 
-            <option value='male'>Male</option> 
-            <option value='female'>Female</option>
+            <option value='Male'>Male</option> 
+            <option value='Female'>Female</option>
             </select></td></tr>";
 
           echo "<tr><td>Age:</td><td><select name='age'> 
