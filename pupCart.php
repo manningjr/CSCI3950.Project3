@@ -8,10 +8,12 @@
 	$session = $_SESSION;
 	$get = $_GET;
 
-	$session['cart'] = $get['id'];
+	$id = $get['id'];
+
+	$session['cart'] = $id;
 
 	print_r($session);
 
-
+	echo "<br><a href='index.php'>Home</a>";
 
 ?>
