@@ -32,11 +32,8 @@
   <body>
     <div class="container">
 
-      <?php      
-          include("navBar.php");
-      ?>
-
-	<?php
+    <?php      
+        include("navBar.php");
 		include("login.php");
 	?>
 

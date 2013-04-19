@@ -10,20 +10,10 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
 <?php
-      ini_set('display_errors', 1);
-      require("database/database.php");
-    ?>
-
-<?php
-ini_set('display_errors', 1);
-include("sidebarJquery.php");
-
-  
-?>
-
-<?php
-ini_set('display_errors', 1);
-include("loginJquery.php");
+    ini_set('display_errors', 1);
+    require("database/database.php");
+    include("sidebarJquery.php");
+    include("loginJquery.php");
 ?>
 
 </head>
@@ -33,9 +23,6 @@ include("loginJquery.php");
 
 <?php
 include("navBar.php");
-?>
-
-<?php
 include("login.php");
 ?>
 

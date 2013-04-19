@@ -17,7 +17,7 @@
 	
 	// not if your looking to push the $id on to the array.
 	
-	$session['cart'] = $id;
+	//$session['cart'] = $id;
 
 	print_r($session);
 
