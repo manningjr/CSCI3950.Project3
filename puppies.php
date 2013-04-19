@@ -117,7 +117,7 @@
         $breed = $puppy['breed'];
         $birthday = $puppy['birthday'];
         $sex = $puppy['sex'];
-        $size = $puppy['size'];
+        //$size = $puppy['size'];
         if ($puppy['vaccination'] == 1)
           $vaccin = "Yes";
         else

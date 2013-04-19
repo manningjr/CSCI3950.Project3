@@ -244,10 +244,32 @@
 
 ?>
 
-
+<hr />
 
 			</div>
 		
+  <div class="paws">
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+  </div>
+  
+  <div class="slogan">
+   <div class="title2">
+  EASY
+  </div>
+  Finding the right puppy can be dog gone hard work. PupFetcher® provides a convenient and efficient means of selecting and purchasing the perfect puppy from the comfort of your home.</p>
+  </div>
+  <div class="slogan">
+   <div class="title2">
+  POWERFULL
+  </div> Take advantage of our PupFetcher or leisurely browse our directory of hundreds of dog breeds. Some puppies for sale may be shipped Worldwide and include crate and veterinarian checkup.</p>
+  </div>
+  <div class="slogan">
+   <div class="title2">
+  RELIABLE
+  </div> Many dog breeders with puppies for sale also offer a health guarantee. With over 50,000 puppies for sale and 100,000+ active dog breeders, you're sure to find the perfect puppy. </p>
+  </div>
 
  <div class="footer">
       <hr/>
