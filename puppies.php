@@ -57,13 +57,55 @@
      
      <div class="puplist">
       
-      
+      <?php         // Makes the drop-down list for searching by breed
+
+          $database = database_connect();
+
+
+          $sql="SELECT breed FROM puppies ORDER BY breed ASC"; 
+          
+          $result=mysql_query($sql); 
+          
+          $options=""; 
+          
+          while ($row=mysql_fetch_assoc($result)) 
+          { 
+              // $breed=$row["breed"]; 
+              // $options.="<OPTION VALUE=\"$breed\">" .$breed; 
+
+            $results[] = $row['breed'];
+
+          } 
+
+          $results = array_unique($results);
+      ?>
+
+
+      <form action='puppies.php' method='get'>  
+        Search by breed: <select name='breed'>
+          <?php
+            foreach($results as $result)
+            {
+              echo '<option value="'.$result.'">'.$result.'</option>';
+            }
+          ?>
+        </select>
+        <input type='submit'>
+      </form>
       
     <?php
 
       $database = database_connect();
 
-      $q1 = "SELECT * FROM `puppies`";
+      if (isset($_GET['breed']))
+      {
+        $q1 = "SELECT * FROM `puppies` WHERE `breed` = '" . $_GET['breed'] . "'";
+      }
+      else
+      {
+        $q1 = "SELECT * FROM `puppies`";
+      }
+
 
       $blah = mysql_query($q1);
 

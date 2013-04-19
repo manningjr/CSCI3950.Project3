@@ -56,7 +56,7 @@
 
 	<?php 
 
-		$post = $_POST;
+		$post = $_GET;
 
 		if (isset($post['submit1']))
 		{
@@ -166,7 +166,7 @@
 		}
 		else
 		{
-			header("LOCATION: index.php?error=1");	// Send to index and print an error
+			echo '<meta http-equiv="refresh" content="0; url=puppies.php"/>';
 		}
 
 	}
@@ -238,7 +238,7 @@
 		}
 		else
 		{
-			header("LOCATION: index.php?error=1");	// Send to index and print an error
+			echo '<meta http-equiv="refresh" content="0; url=puppies.php"/>';	
 		}
 	}
 

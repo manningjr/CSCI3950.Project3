@@ -13,16 +13,25 @@ $result=mysql_query($sql);
 $options=""; 
 while ($row=mysql_fetch_array($result)) { 
     $breed=$row["breed"]; 
-    $options.="<OPTION VALUE=\"$breed\">" .$breed; 
+    // $options.="<option value=\"$breed\">" .$breed . "</option>"; 
+
+    $results[] = $breed;
 	} 
 
+  $results = array_unique($results);
+
+  
+
   echo"<p><h3> Select Your Puppy By</h3>";
-    echo "<form action='search.php' method='post'>";
+    echo "<form action='search.php' method='get'>";
        echo "<table>";
 
           echo "<tr><td>Breed:</td><td><select name = 'breed'>";
 			echo"<OPTION VALUE=0>Select a Breed ";
-			echo"$options ";
+			foreach($results as $result)
+      {
+        echo "<option value='".$result."'>" . $result . "</option>";
+      }
 			echo"</SELECT> ";
 
           echo "<tr><td>Puppy Name:</td><td><input type = 'text' name = 'pupName' placeholder=' Optional' /></td></tr>";
@@ -112,7 +121,7 @@ while ($row=mysql_fetch_array($result)) {
 
    echo"<p><h3> Or Select By</h3>";
       
-      echo "<form action='search.php' method='post'>";
+      echo "<form action='search.php' method='get'>";
         
         echo "<table>";
             echo "<tr><td>Size:</td><td><select name='size'> 
