@@ -110,7 +110,6 @@ li
 	width: auto;
 }
 .paws{
-	margin-top:15px;
 	text-align:center;
 	}
 
@@ -202,6 +201,7 @@ text-align: start;
 	padding-left:30%;
 	padding-right:30%;
 	text-align:center;
+	margin-top:30px;
 	font-size: 14px;
 		color: #FFF;
 }
@@ -307,4 +307,14 @@ z-index: 6;
 .about{
 	color: #999;
 	font-size:16px;
+}
+
+/*Bottom picture*/
+.bottomPic{
+margin-left:10%;
+margin-right:10%;
+-moz-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);
+	-webkit-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);
+	box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.8);
+
 }

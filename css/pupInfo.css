@@ -41,7 +41,7 @@
 	padding-top: 25px;
 	margin-left: 30px;
 	margin-right: 5%;
-	margin-bottom: 80px;
+	margin-bottom: 18px;
 	color: rgb(255,255,255);
 }
 
@@ -84,14 +84,14 @@ padding-bottom: 50px;
 	}
 	
 	.puppy-list{
-		margin-bottom:60px;
+		margin-bottom:19px;
 	}
 	
 .infoButtons{
 	position:absolute;
 	float:right;
 	margin-left: 680px;
-	margin-top: -102px;
+	margin-top: -53px;
 	background-color: rgb(121,146,223);
 	height: 30px;
 	width: 150px;
@@ -111,7 +111,7 @@ padding-bottom: 50px;
 	position:absolute;
 	float:right;
 	margin-left: 680px;
-	margin-top: -102px;
+	margin-top: -53px;
 	background-color: rgb(121,146,223);
 	height: 30px;
 	width: 150px;
@@ -131,7 +131,7 @@ padding-bottom: 50px;
 	position:absolute;
 	float:right;
 	margin-left: 680px;
-	margin-top: -145px;
+	margin-top: -97px;
 	background-color: rgb(121,146,223);
 	height: 30px;
 	width: 150px;
@@ -151,7 +151,7 @@ padding-bottom: 50px;
 	position:absolute;
 	float:right;
 	margin-left: 680px;
-	margin-top: -145px;
+	margin-top: -97px;
 	background-color: rgb(121,146,223);
 	height: 30px;
 	width: 150px;
@@ -244,3 +244,4 @@ padding-bottom: 50px;
 	cursor:pointer;
 	z-index: 1;
 	}
+	

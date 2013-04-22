@@ -154,7 +154,19 @@
     ?>
     </div>  
 
+<hr />
+		
+  <div class="paws">
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+  <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
+  </div>
+
+     <br />
     
+  <div class="bottomPic">
+   <img src="img/puppic/gather.jpg" name="paw" />
+  </div>
 
       <div class="footer">
       <hr/>

@@ -38,13 +38,13 @@ include("login.php");
 		<img src="img/puppic/2.jpg" alt="Demo image" id="2" />
     <img src="img/puppic/3.jpg" alt="Demo image" id="3" />
     <img src="img/puppic/4.jpg" alt="Demo image" id="4" />
-    <img src="img/puppic/5.jpg" alt="Demo image" id="5" />
+    <img src="img/puppic/24.jpg" alt="Demo image" id="24" />
     <img src="img/puppic/6.jpg" alt="Demo image" id="6" />
     <img src="img/puppic/7.jpg" alt="Demo image" id="7" />
     <img src="img/puppic/8.jpg" alt="Demo image" id="8" />
     <img src="img/puppic/9.jpg" alt="Demo image" id="9" />
     <img src="img/puppic/10.jpg" alt="Demo image" id="10" />
-    <img src="img/puppic/11.jpg" alt="Demo image" id="11" />
+    <img src="img/puppic/26.jpg" alt="Demo image" id="26" />
     <img src="img/puppic/12.jpg" alt="Demo image" id="12" />
 	</div>
   
