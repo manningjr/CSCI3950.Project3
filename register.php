@@ -63,19 +63,18 @@ include("loginJquery.php");
     <p>Registering now will speed up the checkout process.
 </p>
   </div>
-<?php
-  <form action='register_handle.php'>;
-	   <table>;
-			<tr><td>First Name:</td><td><input type='text' name = 'fname' /></td></tr>;
-			<tr><td>Last Name:</td><td><input type='text' name = 'lname' /></td></tr>;
-			<tr><td>Password:</td><td><input type='password' name = 'password' /></td></tr>;
-			<tr><td>Confirm Password:</td><td><input type='password' name = 'cpassword' /></td></tr>;
-			<tr><td>Email Address:</td><td><input type = 'text' name = 'email'/></td></tr>;
-			<tr><td>Phone Number:</td><td><input type = 'text' name = 'tel'/></td></tr>;
-			<tr><td>Street:</td><td><input type = 'text' name = 'street' /></td></tr>;
-			<tr><td>City:</td><td><input type = 'text' name = 'city'/></td></tr>;
+  <form action='register_handle.php'>
+	   <table>
+			<tr><td>First Name:</td><td><input type='text' name = 'fname' /></td></tr>
+			<tr><td>Last Name:</td><td><input type='text' name = 'lname' /></td></tr>
+			<tr><td>Password:</td><td><input type='password' name = 'password' /></td></tr>
+			<tr><td>Confirm Password:</td><td><input type='password' name = 'cpassword' /></td></tr>
+			<tr><td>Email Address:</td><td><input type = 'text' name = 'email'/></td></tr>
+			<tr><td>Phone Number:</td><td><input type = 'text' name = 'tel'/></td></tr>
+			<tr><td>Street:</td><td><input type = 'text' name = 'street' /></td></tr>
+			<tr><td>City:</td><td><input type = 'text' name = 'city'/></td></tr>
 			<tr><td>
-				State:</td><td><select name='State'> 
+				State:</td><td><select name='State'>
 				<option value='' selected='selected'>Select</option> 
 				<option value='AL'>Alabama</option> 
 				<option value='AK'>Alaska</option> 
@@ -129,12 +128,11 @@ include("loginJquery.php");
 				<option value='WI'>Wisconsin</option> 
 				<option value='WY'>Wyoming</option>
 				</select>
-			</td></tr>;
-			<tr><td>Zip Code:</td><td><input type = 'text' name = 'zip'/></td></tr>;
-			<tr><td></td><td><button type='submit'>    Submit    </button><button type='Reset'>     Reset     </button></td></tr>;
-		</table>;
-  	</form>;
- ?>
+			</td></tr>
+			<tr><td>Zip Code:</td><td><input type = 'text' name = 'zip'/></td></tr>
+			<tr><td></td><td><button type='submit'>    Submit    </button><button type='Reset'>     Reset     </button></td></tr>
+		</table>
+  	</form>
 </div>
 <div class="right">
 <img src="img/register.jpg" class="pics"/>
