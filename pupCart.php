@@ -59,7 +59,6 @@ include("login.php");
 
 <?php
 
-	$session = $_SESSION;
 	$get = $_GET;
 
 	$id = $get['id'];
@@ -67,10 +66,10 @@ include("login.php");
 	
 	// nickorus you need to do something like this:
 	
-	$session['cart'][] = $id;
+	$_SESSION['cart'][] = $id;
 		
 
-	print_r($session);
+	print_r($_SESSION);
 
 	echo "<br><a href='index.php'>Home</a>";
 
