@@ -29,14 +29,14 @@ $count=mysql_num_rows($result);
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
 
-// Register $myusername, $mypassword and redirect to file "login_success.php"
-//session_register("myusername");
+// Register $myusername, $mypassword and redirect to file "home.php"
+// session_register("myusername");
 
 $_SESSION['myusername'] = $myusername;
 
-header("location:index.php");
+header("location:home.php");
 }
 else {
-echo "Wrong Username or Password";
+header("location: loginIncorrect.php");
 }
 ?>
