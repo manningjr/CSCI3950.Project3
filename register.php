@@ -146,6 +146,7 @@ include("loginJquery.php");
   <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
   </div>
 
+
       <div class="footer">
       <hr/>
          <p>Project 3 Designed by the A-Team. Copyright &copy; 2013.</p>

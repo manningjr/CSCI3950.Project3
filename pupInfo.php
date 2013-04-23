@@ -116,7 +116,7 @@ include("loginJquery.php");
 		echo "<a href='javascript:javascript:history.go(-1)'><img src='img/previous.png'/></a>";
 		echo "</div>";
     echo "<div class='infoButtons3'>";
-		echo"<a href='#'> <img src='img/pupcart.png'/></a>";
+		echo"<a href='pupCart.php'> <img src='img/pupcart.png'/></a>";
 		echo "</div>";
 	  	
 		
