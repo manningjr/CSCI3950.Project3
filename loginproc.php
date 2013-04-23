@@ -4,12 +4,12 @@ session_start();
 
 ini_set('display_errors',1);
 
-include(database/database.php);
+include("database/database.php");
 $tbl_name="user"; // Table name 
 
 // Connect to server and select databse.
-$database = mysql_connect($host, $username, $password) or die("Mysql_Connect failed");
-$blah = mysql_select_db($db_name, $database)or die("cannot select DB");
+$database = mysql_connect(DB_HOST, DB_USER, DB_PASS) or die("Mysql_Connect failed");
+$blah = mysql_select_db(DB_DB, $database)or die("cannot select DB");
 
 // username and password sent from form 
 $myusername=$_POST['myusername']; 
@@ -34,7 +34,7 @@ if($count==1){
 
 $_SESSION['myusername'] = $myusername;
 
-header("location:home.php");
+header("location:pupcart.php");
 }
 else {
 header("location: loginIncorrect.php");

@@ -63,76 +63,158 @@ include("loginJquery.php");
     <p>Registering now will speed up the checkout process.
 </p>
   </div>
-  <form action='register_handle.php'>
-	   <table>
-			<tr><td>First Name:</td><td><input type='text' name = 'fname' /></td></tr>
-			<tr><td>Last Name:</td><td><input type='text' name = 'lname' /></td></tr>
-			<tr><td>Password:</td><td><input type='password' name = 'password' /></td></tr>
-			<tr><td>Confirm Password:</td><td><input type='password' name = 'cpassword' /></td></tr>
-			<tr><td>Email Address:</td><td><input type = 'text' name = 'email'/></td></tr>
-			<tr><td>Phone Number:</td><td><input type = 'text' name = 'tel'/></td></tr>
-			<tr><td>Street:</td><td><input type = 'text' name = 'street' /></td></tr>
-			<tr><td>City:</td><td><input type = 'text' name = 'city'/></td></tr>
-			<tr><td>
-				State:</td><td><select name='State'>
-				<option value='' selected='selected'>Select</option> 
-				<option value='AL'>Alabama</option> 
-				<option value='AK'>Alaska</option> 
-				<option value='AZ'>Arizona</option> 
-				<option value='AR'>Arkansas</option> 
-				<option value='CA'>California</option> 
-				<option value='CO'>Colorado</option> 
-				<option value='CT'>Connecticut</option> 
-				<option value='DE'>Delaware</option> 
-				<option value='DC'>District Of Columbia</option> 
-				<option value='FL'>Florida</option> 
-				<option value='GA'>Georgia</option> 
-				<option value='HI'>Hawaii</option> 
-				<option value='ID'>Idaho</option> 
-				<option value='IL'>Illinois</option> 
-				<option value='IN'>Indiana</option> 
-				<option value='IA'>Iowa</option> 
-				<option value='KS'>Kansas</option> 
-				<option value='KY'>Kentucky</option> 
-				<option value='LA'>Louisiana</option> 
-				<option value='ME'>Maine</option> 
-				<option value='MD'>Maryland</option> 
-				<option value='MA'>Massachusetts</option> 
-				<option value='MI'>Michigan</option> 
-				<option value='MN'>Minnesota</option> 
-				<option value='MS'>Mississippi</option> 
-				<option value='MO'>Missouri</option> 
-				<option value='MT'>Montana</option> 
-				<option value='NE'>Nebraska</option> 
-				<option value='NV'>Nevada</option> 
-				<option value='NH'>New Hampshire</option> 
-				<option value='NJ'>New Jersey</option> 
-				<option value='NM'>New Mexico</option> 
-				<option value='NY'>New York</option> 
-				<option value='NC'>North Carolina</option> 
-				<option value='ND'>North Dakota</option> 
-				<option value='OH'>Ohio</option> 
-				<option value='OK'>Oklahoma</option> 
-				<option value='OR'>Oregon</option> 
-				<option value='PA'>Pennsylvania</option> 
-				<option value='RI'>Rhode Island</option> 
-				<option value='SC'>South Carolina</option> 
-				<option value='SD'>South Dakota</option> 
-				<option value='TN'>Tennessee</option> 
-				<option value='TX'>Texas</option> 
-				<option value='UT'>Utah</option> 
-				<option value='VT'>Vermont</option> 
-				<option value='VA'>Virginia</option> 
-				<option value='WA'>Washington</option> 
-				<option value='WV'>West Virginia</option> 
-				<option value='WI'>Wisconsin</option> 
-				<option value='WY'>Wyoming</option>
-				</select>
-			</td></tr>
-			<tr><td>Zip Code:</td><td><input type = 'text' name = 'zip'/></td></tr>
-			<tr><td></td><td><button type='submit'>    Submit    </button><button type='Reset'>     Reset     </button></td></tr>
-		</table>
-  	</form>
+  <form id:"registerUser" name="registerUser" method="post" action=''>
+  
+  	<p><input type="text" name="username"/>
+   	<label for="username">Username</label></p>
+   	<?php
+		$username = $_REQUEST['username'];
+	?>
+  
+	<p><input type='text' name = 'fname' />
+ 	<label for="fname">First Name</label></p>
+  	<?php
+		$username = $_REQUEST['fname'];
+	?>
+    
+    <p><input type='text' name = 'lname' />
+ 	<label for="fname">Last Name</label></p>
+  	<?php
+		$username = $_REQUEST['lname'];
+	?>
+    
+    <p><input type='text' name = 'password' />
+ 	<label for="password">Password<label></p>
+  	<?php
+		$username = $_REQUEST['password'];
+	?>
+    
+    <p><input type='text' name = 'cpassword' />
+ 	<label for="cpassword"> Confirm Password<label></p>
+  	<?php
+		$username = $_REQUEST['cpassword'];
+	?>
+    
+    <p><input type='text' name = 'email' />
+ 	<label for="email">Email<label></p>
+  	<?php
+		$username = $_REQUEST['email'];
+	?>
+    
+    <p><input type='text' name = 'phoneNum' />
+ 	<label for="phoneNum">Phone Number<label></p>
+  	<?php
+		$username = $_REQUEST['phoneNum'];
+	?>
+    
+    <p><input type='text' name = 'street' />
+ 	<label for="street">Street<label></p>
+  	<?php
+		$username = $_REQUEST['street'];
+	?>
+    
+    <p><input type='text' name = 'city' />
+ 	<label for="city">City<label></p>
+  	<?php
+		$username = $_REQUEST['city'];
+	?>
+
+ 	<?php
+	//require ('mysql_connect.php');
+	$sql="SELECT state_id, state_name FROM assignedState ORDER BY state_name ASC"; 
+	$result=mysql_query($sql); 
+	$options=""; 
+						
+	while ($row=mysql_fetch_array($result)) { 
+	$id=$row["state_id"];
+	$assignedState=$row["state_name"]; 
+	$options.="<OPTION VALUE=\"$id\">".$assignedState; 
+	} 
+	?>
+    <SELECT name="assignedState"> 
+    <OPTION VALUE=0>Select State
+    <?=$options?> 
+    </SELECT> 
+                        
+    <?php
+	//stores value from dropdown menu in assignedTo2
+	$assignedState= $_REQUEST['assignedState'];
+	?>
+            
+	<p><input type='text' name = 'zip' />
+ 	<label for="zip">Zip<label></p>
+  	<?php
+		$username = $_REQUEST['zip'];
+	?>
+    
+    <p><label name="rank">Rank</label>
+   	<SELECT name="rank">
+ 	<option>User</option>
+   	<option>Admin</option>
+   	<?php
+   	$rank=$_REQUEST['rank'];
+  	?>
+   	</SELECT></p>
+    
+	<input name="submit" type="submit" value="Register"/>
+					<?php
+                            
+                            require ('./mysql_connect.php');
+                            //ini_set('display_errors',1);
+								if (isset($username) || isset($password1) || isset($cpassword) || isset($rank))
+								{
+									if ($rank=='admin')
+									{
+										$rankNum=1;
+									}
+									else
+									{
+										$rankNum=0;
+									}
+														
+				// requirements that must be met
+									if ($username!="" && $password==$cpassword && $password!="" && strlen($password)>=8)
+										{
+											//updates username and password in the database
+											$query="INSERT INTO user VALUES (\"\",\"$username\", \"$password\",\"$rankNum\")";
+											$result = mysql_query($query);
+											
+												if($result)
+												{
+													$username = $_SESSION['myusername'];
+				
+													echo "<p style='font-family:verdana; font-size:20px;'>" . $username . "</p>";
+													echo "<p>You have successfully entered in a username and password.</p>";
+													$_POST = array();
+												}
+												else // An error has been made!!!!
+												{
+													die('Error: ' . mysql_error(). "<br>");
+													echo "An error has been made, please try again.";
+												}
+										}
+									//	Does password equal confirmed password?
+									else if ($password!=$cpassword)
+										{
+											echo "<p>I am sorry but the two passwords do not match, please try again.</p>";
+										}
+									//	Is password long enough?
+									else if(strlen($password)<8)
+										{
+											echo "<p>Please make sure your password is eight characters or longer.</p>";
+										}
+									//	Are all fields entered with information?
+									else if($username=="" || $password=="")
+										{
+											echo "<p>Please enter in information in all fields.</p>";
+										}
+										
+									// Close database connection	
+									//mysql_close($con);
+								}
+							?>
+    
+  </form>
 </div>
 <div class="right">
 <img src="img/register.jpg" class="pics"/>
