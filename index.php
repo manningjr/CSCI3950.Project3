@@ -69,6 +69,7 @@ include("login.php");
 	</script>
     
   </div>
+  <br />
   <div class="paws">
   <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
   <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
