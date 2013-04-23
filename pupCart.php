@@ -57,23 +57,8 @@ include("login.php");
 
 <div class="cartContent">
 
-<?php
+    <p style="color: white;">Hello</p>
 
-	$get = $_GET;
-
-	$id = $get['id'];
-	
-	
-	// nickorus you need to do something like this:
-	
-	$_SESSION['cart'][] = $id;
-		
-
-	print_r($_SESSION);
-
-	echo "<br><a href='index.php'>Home</a>";
-
-?>
 </div>
 
 
