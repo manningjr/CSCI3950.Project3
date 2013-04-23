@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.columnCont{
+height:300px;	
+}
+
+.left{
+position: absolute;
+width: 40%;
+padding: 10px;
+padding-left: 10%;	
+}
+
+.right{
+position: absolute;
+width: 30%;
+padding: 10px;
+margin-left: 60%;
+}
+
+h3{
+color:rgb(255,255,255);	
+}
