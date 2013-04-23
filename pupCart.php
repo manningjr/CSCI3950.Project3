@@ -57,7 +57,44 @@ include("login.php");
 
 <div class="cartContent">
 
-    <p style="color: white;">Hello</p>
+    <?php
+
+      $database = database_connect();
+
+      $session = $_SESSION;
+
+      echo "<p style:'color:white;'>";
+      print_r($session);
+      echo "</p>";
+
+      $queries = array(); // Make queries array
+
+
+      //  Makes queries out of $_SESSION data
+      $i = 0; //  Index placeholder
+      foreach ($session['cart'] as $key=>$value)
+      {
+        $queries[$i] = "SELECT * FROM `puppies` WHERE `puppy_id` = '" . $value . "'";   //  Make query
+        $i++; //  Increment index
+      }
+
+      echo "<br><br>";
+
+      echo "<p style:'color:white;'>";
+      foreach ($queries as $q)
+      {
+        echo $q;
+        echo "<br>";
+      }
+      echo "</p>";
+
+
+
+
+      session_destroy($_SESSION['cart']);
+
+
+    ?>
 
 </div>
 

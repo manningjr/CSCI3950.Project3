@@ -6,6 +6,14 @@
 
 	$get = $_GET;
 	$id = $get['id'];
+
+	foreach ($_SESSION['cart'] as $s)
+	{
+		if ($s == $id)
+		{
+			
+		}
+	}
 	$_SESSION['cart'][] = $id;
 		
 ?>
@@ -91,22 +99,5 @@ include("sidebar.php");
   </body>
 </html>
 
-<?php
-  // Prints an error if they try to search for a puppy and do not fill out all the necessary fields
-  if (isset($_GET['error']) && $_GET['error'] == 1)
-  {
-    echo "<script type='text/javascript'>";
-    echo "alert('Please fill in all the required search fields and try again.');";
-    echo "</script>";
-  }
 
-?>
-
-
-
-
-
-
-
-?>
 
