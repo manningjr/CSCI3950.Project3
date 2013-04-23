@@ -34,7 +34,7 @@ if($count==1){
 
 $_SESSION['myusername'] = $myusername;
 
-header("location:pupcart.php");
+header("location: puppies.php");
 }
 else {
 header("location: loginIncorrect.php");

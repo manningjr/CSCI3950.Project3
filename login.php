@@ -29,7 +29,7 @@ ini_set('display_errors', 1);
 									<script>
                                     function forgotPassword()
                                     {
-                                    alert("Please contact your campus administrator!");
+                                    alert("Please wait for changes!");
                                     }
                                     </script>
                                     
