@@ -150,6 +150,9 @@
 		    echo "<div class='infoButtons'>";
 		      echo"<a href='addToCart.php?id=" . $puppy_id . "'> <img src='img/pupcart2.png' /></a>";
 		    echo "</div>";
+
+        //  Remove button printed here for each puppy. 'puppy_id' needs to be linked to the remove buttons so it can be 
+        //  found and deleted from the session. The page will be reloaded and it won't load the deleted puppy
       }
     ?>
     </div>  
