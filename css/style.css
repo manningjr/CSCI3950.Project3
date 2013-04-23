@@ -223,13 +223,13 @@ a:hover, a:active, a:focus {
 /*Login*/
 
 .toggle2{
-	position:absolute;
-	margin-left: 990px;
+	position: absolute;
+	margin-left: 930px;
 	margin-top: -121px;
-	float:right;
+	float: right;
 	background-color: rgb(121,146,223);
 	height: 40px;
-	width: 100px;
+	width: 155px;
 	border: thin solid rgb(0,0,0);
 	border-bottom: none;
 	-moz-box-shadow: -1px 0 0px 3px rgba(100, 100, 100, 0.8);
@@ -239,17 +239,14 @@ a:hover, a:active, a:focus {
 	-webkit-border-radius: 15px 15px 0px 0px;
 	-khtml-border-radius: 15px 15px 0px 0px;
 	border-radius: 15px 15px 0px 0px;
-	cursor:pointer;
 	z-index: 1;
 	}
 	
 	.toggle2-letters{
 	position:absolute;
-	margin-left: 990px;
+	margin-left: 1020px;
 	margin-top: -130px;
 	float:right;
-	height: 40px;
-	width: 100px;
 	cursor:pointer;
 	z-index: 4;
 	text-align:center;
@@ -260,11 +257,9 @@ a:hover, a:active, a:focus {
 	
 .toggle2-letters:hover{
 	position:absolute;
-	margin-left: 990px;
+	margin-left: 1020px;
 	margin-top: -130px;
 	float:right;
-	height: 40px;
-	width: 100px;
 	color: rgb(0,0,0);
 	-moz-border-radius: 15px 15px 0px 0px;
 	-webkit-border-radius: 15px 15px 0px 0px;
@@ -330,3 +325,46 @@ p
 	color:white;
 	maring-top:-20px;
 }
+
+
+/*cart*/
+	
+	.cartTop-letters{
+	position:absolute;
+	margin-left: 950px;
+	margin-top: -135px;
+	float:right;
+	cursor:pointer;
+	z-index: 4;
+	text-align:center;
+	color:rgb(255,255,255);
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+	
+.cartTop-letters:hover{
+	position:absolute;
+	margin-left: 950px;
+	margin-top: -135px;
+	float:right;
+	color: rgb(0,0,0);
+	-moz-border-radius: 15px 15px 0px 0px;
+	-webkit-border-radius: 15px 15px 0px 0px;
+	-khtml-border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
+	cursor: pointer;
+	z-index: 4;
+	}
+	
+		.separation-letters{
+	position: absolute;
+	margin-left: 1000px;
+	margin-top: -132px;
+	float: right;
+	z-index: 4;
+	text-align: center;
+	color: rgb(255,255,255);
+	font-size: 20px;
+	cursor: default;
+	font-family: Arial, Helvetica, sans-serif;
+	}

@@ -1,7 +1,16 @@
+<div class="cartTop-letters">
+ <p><img src="img/cart.png"</p>
+</div>
+ 
  <span class="toggle2">
 </span>
+
+<div class="separation-letters">
+ <p>|</p>
+</div>
+
  <span class="toggle2-letters">
- <p><b>Login</b></p>
+<p><b>Login</b></p>
 </span>
 <div class="hiddenDivLogin">
 <?php
