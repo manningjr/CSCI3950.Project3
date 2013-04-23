@@ -216,7 +216,12 @@ include("loginJquery.php");
     
   </form>
 </div>
+
 <div class="right">
+<img src="img/register.jpg" class="pics"/>
+</div>
+
+<div class="left">
 <img src="img/register.jpg" class="pics"/>
 </div>
 
