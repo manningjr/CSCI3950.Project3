@@ -34,7 +34,11 @@ include("loginJquery.php");
 
   <body>
      <div class="container">
-
+ <!--Sidebar-->
+    <?php
+    include("sidebar.php");
+    ?>
+    <!--End of Sidebar-->
       <?php      
           include("navBar.php");
       ?>
@@ -58,8 +62,14 @@ include("loginJquery.php");
   
   
      <div class="columnCont2">
+
+<div class="right">
+<img src="img/register.jpg" class="pics"/>
+</div>
+
 <div class="left">
- <div class="about">
+ 
+<div class="about">
     <p>Registering now will speed up the checkout process.
 </p>
   </div>
@@ -83,13 +93,13 @@ include("loginJquery.php");
 		$username = $_REQUEST['lname'];
 	?>
     
-    <p><input type='text' name = 'password' />
+    <p><input type='password' name = 'password' />
  	<label for="password">Password<label></p>
   	<?php
 		$username = $_REQUEST['password'];
 	?>
     
-    <p><input type='text' name = 'cpassword' />
+    <p><input type='password' name = 'cpassword' />
  	<label for="cpassword"> Confirm Password<label></p>
   	<?php
 		$username = $_REQUEST['cpassword'];
@@ -215,15 +225,7 @@ include("loginJquery.php");
 							?>
     
   </form>
-</div>
 
-<div class="right">
-<img src="img/register.jpg" class="pics"/>
-</div>
-
-<div class="left">
-<img src="img/register.jpg" class="pics"/>
-</div>
 
 </div>
 
@@ -240,11 +242,7 @@ include("loginJquery.php");
         <!-- end .footer --></div>
       <!-- end .content --></div> 
 
-    <!--Sidebar-->
-    <?php
-    include("sidebar.php");
-    ?>
-    <!--End of Sidebar-->
+   
 
       <!-- end .container --></div>
       <!-- end .background--></div>
