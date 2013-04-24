@@ -157,7 +157,61 @@ include("loginJquery.php");
     ?>  
 	<input name="submit" type="submit" value="Register"/>
 					
-					
+					<?php     
+                            require ('./mysql_connect.php');
+                            //ini_set('display_errors',1);
+								if (isset($username) || isset($password1) || isset($cpassword) || isset($rank))
+								{
+									if ($rank=='admin')
+									{
+										$rankNum=1;
+									}
+									else
+									{
+										$rankNum=0;
+									}
+														
+				// requirements that must be met
+									if ($username!="" && $password==$cpassword && $password!="" && strlen($password)>=8)
+										{
+											//updates username and password in the database
+											$query="INSERT INTO user VALUES (\"\",\"$username\", \"$password\",\"$rankNum\")";
+											$result = mysql_query($query);
+											
+												if($result)
+												{
+													$username = $_SESSION['myusername'];
+				
+													echo "<p style='font-family:verdana; font-size:20px;'>" . $username . "</p>";
+													echo "<p>You have successfully entered in a username and password.</p>";
+													$_POST = array();
+												}
+												else // An error has been made!!!!
+												{
+													die('Error: ' . mysql_error(). "<br>");
+													echo "An error has been made, please try again.";
+												}
+										}
+									//	Does password equal confirmed password?
+									else if ($password!=$cpassword)
+										{
+											echo "<p>I am sorry but the two passwords do not match, please try again.</p>";
+										}
+									//	Is password long enough?
+									else if(strlen($password)<8)
+										{
+											echo "<p>Please make sure your password is eight characters or longer.</p>";
+										}
+									//	Are all fields entered with information?
+									else if($username=="" || $password=="")
+										{
+											echo "<p>Please enter in information in all fields.</p>";
+										}
+										
+									// Close database connection	
+									//mysql_close($con);
+								}
+							?>
      </form>
      
 </div>
