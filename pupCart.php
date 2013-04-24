@@ -57,15 +57,20 @@ include("login.php");
 
 <div class="cartContent">
 
+<?php
+ini_set('display_errors', 1);
+include("addToCart2.php");
+?>
+
     <?php
 
       $database = database_connect();
 
       $session = $_SESSION;
 
-      echo "<p style:'color:white;'>";
-      print_r($session);
-      echo "</p>";
+      //echo "<p style:'color:white;'>";
+      //print_r($session);
+      //echo "</p>";
 
       $queries = array(); // Make queries array
 
@@ -75,24 +80,70 @@ include("login.php");
       foreach ($session['cart'] as $key=>$value)
       {
         $queries[$i] = "SELECT * FROM `puppies` WHERE `puppy_id` = '" . $value . "'";   //  Make query
-        $i++; //  Increment index
+        
+		
+		////////////////////////////////////////////////////////
+		$blah = mysql_query($queries[$i]);
+		while($puppy = mysql_fetch_assoc($blah))
+      {
+        $puppy_id = $puppy['puppy_id'];   // Keep as hidden field on image links to pupInfo. Then we can just send this field with the link and query for the correct id on pupInfo.php
+        $pupName = $puppy['name'];
+        $breed = $puppy['breed'];
+        $birthday = $puppy['birthday'];
+        $sex = $puppy['sex'];
+        //$size = $puppy['size'];
+        if ($puppy['vaccination'] == 1)
+          $vaccin = "Yes";
+        else
+          $vaccin = "No";
+        $price = $puppy['price'];
+        $location = $puppy['location'];
+        $img = $puppy['img_name'];
+
+        $puppies[] = $puppy;  //Stores info into puppies[] for potential use later. May not be necessary.
+		 
+        echo "<hr>";
+        
+        echo "<div class='puppic'>";
+          echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image' width='100' height='100'/></a>";
+        echo "</div>";
+        
+        echo "<div class='puppy-list'>";
+          echo "<table>";
+            echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
+            echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
+            echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
+            echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
+          echo "</table>";
+        echo "</div>";
+        
+		    echo "<div class='infoButtons3'>";
+		      echo"<a href='addToCart.php?id=" . $puppy_id . "'> <img src='img/pupcart3.png' /></a>";
+		    echo "</div>";
+
+        //  Remove button printed here for each puppy. 'puppy_id' needs to be linked to the remove buttons so it can be 
+        //  found and deleted from the session. The page will be reloaded and it won't load the deleted puppy
+      }
+	  
+	  $i++; //  Increment index
       }
 
       echo "<br><br>";
 
-      echo "<p style:'color:white;'>";
-      foreach ($queries as $q)
+      //echo "<p style:'color:white;'>";
+      //foreach ($queries as $q)
       {
-        echo $q;
-        echo "<br>";
+       // echo $q;
+       // echo "<br>";
       }
       echo "</p>";
-
-
-
-
-
     ?>
+
+<?php
+	echo "<div class='previousButton'>";
+		echo "<a href='javascript:javascript:history.go(-1)'><img src='img/previous.png'/></a>";
+		echo "</div>";
+		?>
 
 </div>
 

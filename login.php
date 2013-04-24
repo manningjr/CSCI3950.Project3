@@ -1,5 +1,5 @@
 <div class="cartTop-letters">
- <p><img src="img/cart.png"</p>
+ <a href="pupCart.php"><p><img src="img/cart.png"</p></a>
 </div>
  
  <span class="toggle2">
