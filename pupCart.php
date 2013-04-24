@@ -52,10 +52,9 @@ include("login.php");
      <img src="img/paw.png" name="paw" width="10" height="10" class="paw"/>
      </div>
   
-  <br /><br />
 <!--Content of Cart-->
 
-<div class="cartContent">
+<div class="puplist">
 
 <?php
 ini_set('display_errors', 1);
@@ -142,6 +141,10 @@ include("addToCart2.php");
 <?php
 	echo "<div class='previousButton'>";
 		echo "<a href='javascript:javascript:history.go(-1)'><img src='img/previous.png'/></a>";
+		echo "</div>";
+		
+		    echo "<div class='infoButtons3'>";
+		echo"<a href='checkout.php'> <img src='img/checkout.png'/></a>";
 		echo "</div>";
 		?>
 
