@@ -150,13 +150,16 @@ include("loginJquery.php");
 		<option value='WV'>West Virginia</option> 
 		<option value='WI'>Wisconsin</option> 
 		<option value='WY'>Wyoming</option>
-		</select></td><td>State</td></tr>";
+		</select></td><td>State</td></tr>
 		<?php $username = $_REQUEST['state']; ?>             
             
-		<tr><td><input type='text' name = 'zip' /></td><td> <label for='zip'>Zip<label></td></tr>
+		<tr><td><input type='text' name = 'zip' /></td><td> <label for='zip'>Zip</label></td></tr>
 			<?php $username = $_REQUEST['zip']; ?>
 		
-		</table>";
+		</table>
+        
+        <br/>
+        
 	<input name="submit" type="submit" value="Register"/>
 					
 					<?php     
