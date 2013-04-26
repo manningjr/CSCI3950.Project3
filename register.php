@@ -90,6 +90,10 @@ include("loginJquery.php");
 		$username = $_REQUEST['email'];
     echo"<tr><td><input type='text' name = 'phoneNum' /></td><td> <label for='phoneNum'>Phone Number<label></td></tr>";
 		$username = $_REQUEST['phoneNum'];
+	echo"<tr><td><input type='text' name = 'cardNum' /></td><td> <label for='cardNum'>Card Number<label></td></tr>";
+		$username = $_REQUEST['cardNum'];
+    echo"<tr><td><input type='text' name = 'secCode' /></td><td> <label for='secCode'Security Code<label></td></tr>";
+		$username = $_REQUEST['secCode'];
     echo"<tr><td><input type='text' name = 'street' /></td><td> <label for='street'>Street<label></td></tr>";
 		$username = $_REQUEST['street'];
     echo"<tr><td><input type='text' name = 'city'/></td><td> <label for='city'>City<label></td></tr>";
@@ -160,22 +164,14 @@ include("loginJquery.php");
 					<?php     
                             require ('./mysql_connect.php');
                             //ini_set('display_errors',1);
-								if (isset($username) || isset($password1) || isset($cpassword) || isset($rank))
+	if (isset($username) || isset($fname) || isset($lname) || isset($password1) || isset($cpassword) || isset($email) || isset($phoneNum) || isset($cardNum) || isset($secCode) || isset($street) || isset($city) || isset($state) || isset($zip))
 								{
-									if ($rank=='admin')
-									{
-										$rankNum=1;
-									}
-									else
-									{
-										$rankNum=0;
-									}
 														
 				// requirements that must be met
-									if ($username!="" && $password==$cpassword && $password!="" && strlen($password)>=8)
+									if ($username!="" && $fname!="" && $lname!="" && $password==$cpassword && $password!="" && strlen($password)>=8 && $email!="" && $phoneNum!="" && $cardNum!="" && $secCode!="" && $$ $street!="" && $city!="" && $state!="" && $zip!="")
 										{
 											//updates username and password in the database
-											$query="INSERT INTO user VALUES (\"\",\"$username\", \"$password\",\"$rankNum\")";
+							$query="INSERT INTO user VALUES (\"\",\"$username\", \"$password\",\"$fname\" \"$lname\" \"$email\", \"$phoneNum\", \"$card_number\" \"$security_code\" \"$street\",\"$apt\" \"$city\"\"$state\",\"$zip\")";
 											$result = mysql_query($query);
 											
 												if($result)
@@ -203,7 +199,7 @@ include("loginJquery.php");
 											echo "<p>Please make sure your password is eight characters or longer.</p>";
 										}
 									//	Are all fields entered with information?
-									else if($username=="" || $password=="")
+									else if($username=="" || $fname=="" || $lname=="" || $password=="" || $email=="" || $phoneNum=="" || $cardNum=="" || $secCode=="" || $street=="" || $city=="" || $state=="" || $zip=="")
 										{
 											echo "<p>Please enter in information in all fields.</p>";
 										}
