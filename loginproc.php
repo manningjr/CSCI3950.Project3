@@ -4,12 +4,15 @@ session_start();
 
 ini_set('display_errors',1);
 
-include("database/database.php");
+$DB_HOST="localhost";
+$DB_USER="root";
+$DB_PASS="root";
+$DB_DB="PupFetcher";
 $tbl_name="user"; // Table name 
 
 // Connect to server and select databse.
-$database = mysql_connect(DB_HOST, DB_USER, DB_PASS) or die("Mysql_Connect failed");
-$blah = mysql_select_db(DB_DB, $database)or die("cannot select DB");
+$database = mysql_connect($DB_HOST, $DB_USER, $DB_PASS) or die("Mysql_Connect failed");
+$blah = mysql_select_db($DB_DB, $database)or die("cannot select DB");
 
 // username and password sent from form 
 $myusername=$_POST['myusername']; 
