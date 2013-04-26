@@ -73,32 +73,31 @@ include("loginJquery.php");
     <p>Registering now will speed up the checkout process.
 </p>
   </div>
-  <?php
-  echo"<form id:'registerUser' name='registerUser' method='post' action=''></td></tr>";
-  echo"<table>";
-  	echo"<tr><td><input type='text' name='username'/></td><td> <label for='username'>Username</label></td></tr>";
-		$username = $_REQUEST['username'];
-	echo"<tr><td><input type='text' name = 'fname' /></td><td> <label for='fname'>First Name</label></td></tr>";
-		$username = $_REQUEST['fname'];
-    echo"<tr><td><input type='text' name = 'lname' /></td><td> <label for='fname'>Last Name</label></td></tr>";
-		$username = $_REQUEST['lname'];
-	echo"<tr><td><input type='password' name = 'password' /></td><td> <label for='password'>Password<label></td></tr>";
-		$username = $_REQUEST['password'];
-    echo"<tr><td><input type='password' name = 'cpassword' /></td><td> <label for='cpassword'>Confirm Pasrd<label></td></tr>";
-		$username = $_REQUEST['cpassword'];
-    echo"<tr><td><input type='text' name = 'email' /></td><td> <label for='email'>Email<label></td></tr>";
-		$username = $_REQUEST['email'];
-    echo"<tr><td><input type='text' name = 'phoneNum' /></td><td> <label for='phoneNum'>Phone Number<label></td></tr>";
-		$username = $_REQUEST['phoneNum'];
-	echo"<tr><td><input type='text' name = 'cardNum' /></td><td> <label for='cardNum'>Card Number<label></td></tr>";
-		$username = $_REQUEST['cardNum'];
-    echo"<tr><td><input type='text' name = 'secCode' /></td><td> <label for='secCode'Security Code<label></td></tr>";
-		$username = $_REQUEST['secCode'];
-    echo"<tr><td><input type='text' name = 'street' /></td><td> <label for='street'>Street<label></td></tr>";
-		$username = $_REQUEST['street'];
-    echo"<tr><td><input type='text' name = 'city'/></td><td> <label for='city'>City<label></td></tr>";
-		$username = $_REQUEST['city'];
-	echo"<tr><td><select name='State'> 
+  <form id:'registerUser' name='registerUser' method='post' action=''></td></tr>
+  <table>
+  	<tr><td><input type='text' name='username'/></td><td> <label for='username'>Username</label></td></tr>
+			<?php $username = $_REQUEST['username']; ?>
+	<tr><td><input type='text' name = 'fname' /></td><td> <label for='fname'>First Name</label></td></tr>
+			<?php $username = $_REQUEST['fname']; ?>
+    <tr><td><input type='text' name = 'lname' /></td><td> <label for='fname'>Last Name</label></td></tr>
+			<?php $username = $_REQUEST['lname']; ?>
+	<tr><td><input type='password' name = 'password' /></td><td> <label for='password'>Password<label></td></tr>
+			<?php $username = $_REQUEST['password']; ?>
+   	<tr><td><input type='password' name = 'cpassword' /></td><td> <label for='cpassword'>Confirm Pasrd<label></td></tr>
+			<?php $username = $_REQUEST['cpassword']; ?>
+   	<tr><td><input type='text' name = 'email' /></td><td> <label for='email'>Email<label></td></tr>
+			<?php $username = $_REQUEST['email']; ?>
+   	<tr><td><input type='text' name = 'phoneNum' /></td><td> <label for='phoneNum'>Phone Number<label></td></tr>
+			<?php $username = $_REQUEST['phoneNum']; ?>
+	<tr><td><input type='text' name = 'cardNum' /></td><td> <label for='cardNum'>Card Number<label></td></tr>
+			<?php $username = $_REQUEST['cardNum']; ?>
+   	<tr><td><input type='text' name = 'secCode' /></td><td> <label for='secCode'>Security Code<label></td></tr>
+			<?php $username = $_REQUEST['secCode']; ?>
+   	<tr><td><input type='text' name = 'street' /></td><td> <label for='street'>Street<label></td></tr>
+			<?php $username = $_REQUEST['street']; ?>
+   	<tr><td><input type='text' name = 'city'/></td><td> <label for='city'>City<label></td></tr>
+			<?php $username = $_REQUEST['city']; ?>
+	<tr><td><select name='State'> 
 		<option value='' selected='selected'>Select</option> 
 		<option value='AL'>Alabama</option> 
 		<option value='AK'>Alaska</option> 
@@ -152,18 +151,17 @@ include("loginJquery.php");
 		<option value='WI'>Wisconsin</option> 
 		<option value='WY'>Wyoming</option>
 		</select></td><td>State</td></tr>";
-		$username = $_REQUEST['state'];                  
+		<?php $username = $_REQUEST['state']; ?>             
             
-		echo"<tr><td><input type='text' name = 'zip' /></td><td> <label for='zip'>Zip<label></td></tr>";
-		$username = $_REQUEST['zip'];
+		<tr><td><input type='text' name = 'zip' /></td><td> <label for='zip'>Zip<label></td></tr>
+			<?php $username = $_REQUEST['zip']; ?>
 		
-		echo"</table>";
-    ?>  
+		</table>";
 	<input name="submit" type="submit" value="Register"/>
 					
 					<?php     
                             require ('./mysql_connect.php');
-                            //ini_set('display_errors',1);
+                            ini_set('display_errors',1);
 	if (isset($username) || isset($fname) || isset($lname) || isset($password1) || isset($cpassword) || isset($email) || isset($phoneNum) || isset($cardNum) || isset($secCode) || isset($street) || isset($city) || isset($state) || isset($zip))
 								{
 														
@@ -171,7 +169,7 @@ include("loginJquery.php");
 									if ($username!="" && $fname!="" && $lname!="" && $password==$cpassword && $password!="" && strlen($password)>=8 && $email!="" && $phoneNum!="" && $cardNum!="" && $secCode!="" && $$ $street!="" && $city!="" && $state!="" && $zip!="")
 										{
 											//updates username and password in the database
-							$query="INSERT INTO user VALUES (\"\",\"$username\", \"$password\",\"$fname\" \"$lname\" \"$email\", \"$phoneNum\", \"$card_number\" \"$security_code\" \"$street\",\"$apt\" \"$city\"\"$state\",\"$zip\")";
+							$query="INSERT INTO user VALUES (\"\",\"$username\", \"$password\",\"$fname\", \"$lname\", \"$email\", \"$phoneNum\", \"$card_number\", \"$security_code\", \"$street\", \"$city\", \"$state\",\"$zip\")";
 											$result = mysql_query($query);
 											
 												if($result)
@@ -204,8 +202,8 @@ include("loginJquery.php");
 											echo "<p>Please enter in information in all fields.</p>";
 										}
 										
-									// Close database connection	
-									//mysql_close($con);
+									//Close database connection	
+									mysql_close($con);
 								}
 							?>
      </form>
