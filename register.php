@@ -75,7 +75,7 @@ include("loginJquery.php");
 <div class="left">
  
 <div class="about">
-    <p>Registering now will speed up the checkout process.
+    <p>You need to register in order to start the checkout process.
 </p>
   </div>
   <form id:"registerUser" name="registerUser" method="post" action=""></td></tr>

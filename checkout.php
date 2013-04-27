@@ -1,4 +1,12 @@
 <?php
+if (!isset($_SESSION['myusername'])){
+/* Redirect browser */
+header("Location: register.php");}
+/* Make sure that code below does not get executed when we redirect. */
+exit;
+?>
+
+<?php
   session_start();
 ?>
 
