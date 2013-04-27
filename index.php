@@ -23,7 +23,14 @@
 
 <?php
 include("navBar.php");
-include("login.php");
+if (!isset($_SESSION['myusername']))
+	{
+		include("logoutbutton.php");
+	}
+	else
+	{
+		include("login.php");
+	}
 ?>
 
   <div class="content">
