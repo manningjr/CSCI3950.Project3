@@ -16,11 +16,20 @@
 		if ($temp != true)
 		{
 			$_SESSION['cart'][] = $id;
-			echo "<p style:'color:white;'>The puppy was added to your cart</p>";
 		}
 		else
 		{
-			echo "<p style:'color:white;'>Puppy already in cart</p>";
+			?>
+
+			<script>
+				onload = function f()
+				{
+					alert("Puppy already in cart");
+				}
+			</script>
+
+			<?php
+
 		}
 
 	?>
