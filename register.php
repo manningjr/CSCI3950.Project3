@@ -1,5 +1,6 @@
 <?php
   session_start();
+  ini_set('display_errors',1);
 ?>
 
 </html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -169,7 +170,7 @@ include("loginJquery.php");
 								{
 														
 				// requirements that must be met
-									if ($username!="" && $fname!="" && $lname!="" && $password==$cpassword && $password!="" && strlen($password)>=8 && $email!="" && $phoneNum!="" && $cardNum!="" && $secCode!="" && $$ $street!="" && $city!="" && $state!="" && $zip!="")
+									if ($username!="" && $fname!="" && $lname!="" && $password==$cpassword && $password!="" && strlen($password)>=8 && $email!="" && $phoneNum!="" && $cardNum!="" && $secCode!="" && $street!="" && $city!="" && $state!="" && $zip!="")
 										{
 											//updates username and password in the database
 							$query="INSERT INTO user VALUES (\"\",\"$username\", \"$password\",\"$fname\", \"$lname\", \"$email\", \"$phoneNum\", \"$card_number\", \"$security_code\", \"$street\", \"$city\", \"$state\",\"$zip\")";
