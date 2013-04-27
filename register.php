@@ -186,6 +186,15 @@ include("loginJquery.php");
 				
 													echo "<p style='font-family:verdana; font-size:20px;'>" . $username . "</p>";
 													echo "<p>You have successfully entered in a username and password.</p>";
+													?>
+                                                    <script>
+													onload = function f()
+													{
+														alert("You have registered succesfully.");
+													}
+													</script>
+                                                    
+                                                    <?php
 													$_POST = array();
 												}
 												else // An error has been made!!!!
