@@ -1,12 +1,4 @@
 <?php
-if (!isset($_SESSION['myusername'])){
-/* Redirect browser */
-header("Location: register.php");}
-/* Make sure that code below does not get executed when we redirect. */
-exit;
-?>
-
-<?php
   session_start();
 ?>
 
@@ -70,6 +62,10 @@ if (!isset($_SESSION['myusername']))
 <div class="columnCont">
 <div class="left">
 <?php
+if (!isset($_SESSION['myusername'])){
+	 echo '<h3>You need to <a href="register.php" style="color: rgb(121,146,223);"><u>Register</u></a> or Login to access the checkout process.</h3>';
+}
+else{
 //echo "<p>The amount of your order is: $<b>$price</b>"; 
  //echo"<p><h4> Payment Information:</h4></p>";
    echo "<form action='confirm.php'>";
@@ -140,7 +136,7 @@ if (!isset($_SESSION['myusername']))
 	echo   "<tr><td></td><td><button type='submit'>    Place Order    </button><button type='Reset'>     Cancel     </button></td></tr>";
     echo "</table>";
    echo "</form>";
- ?>
+}?>
 </div>
 
 <div class="right">
