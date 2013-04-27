@@ -200,7 +200,7 @@ include("loginJquery.php");
 											echo "<p>Please make sure your password is eight characters or longer.</p>";
 										}
 									//	Are all fields entered with information?
-									else if($username=="" || $fname=="" || $lname=="" || $password=="" || $email=="" || $phoneNum=="" || $cardNum=="" || $secCode=="" || $street=="" || $city=="" || $state=="" || $zip=="")
+									else if($username=="" || $fname=="" || $lname=="" || $password=="" || $email=="" || $phoneNum=="" || $cardNum=="" || $secCode=="" || $street=="" || $city=="" || $zip=="")
 										{
 											echo "<p>Please enter in information in all fields.</p>";
 										}
