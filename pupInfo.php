@@ -32,10 +32,17 @@ include("loginJquery.php");
   <body>
     <div class="container">
 
-      <?php
+		<?php
         include("navBar.php");
-        require("login.php");
-      ?>
+        if (!isset($_SESSION['myusername']))
+            {
+                include("login.php");
+            }
+            else
+            {
+                include("logoutbutton.php");
+            }
+        ?>
 
         <div class="contentProfile">
   

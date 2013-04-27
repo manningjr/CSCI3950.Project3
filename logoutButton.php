@@ -9,21 +9,6 @@
  <p>|</p>
 </div>
 
- <span class="toggle2-letters">
-<p><b>Logout</b></p>
-</span>
-<div class="hiddenDivLogin">
-<?php
-ini_set('display_errors', 1);
- ?>
-
-<div class="logout">
-	<a href="logout.php" class="---" >Logout</a>
-
-	<?php 
-		$username = $_SESSION['myusername'];
-		
-    	echo "<p style='font-family:verdana; font-size:30px;'>" . $username . "</p>";
-   	?>
-</div>
+ <div class="toggle2-letters">
+<a href="logout.php"><p><b>Logout</b></p></a>
 </div>

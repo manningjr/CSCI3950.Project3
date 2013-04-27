@@ -35,10 +35,14 @@ include("loginJquery.php");
 
 <?php
 include("navBar.php");
-?>
-
-<?php
-include("login.php");
+if (!isset($_SESSION['myusername']))
+	{
+		include("login.php");
+	}
+	else
+	{
+		include("logoutbutton.php");
+	}
 ?>
 
   <div class="content">

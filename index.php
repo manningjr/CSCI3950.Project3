@@ -25,11 +25,11 @@
 include("navBar.php");
 if (!isset($_SESSION['myusername']))
 	{
-		include("logoutbutton.php");
+		include("login.php");
 	}
 	else
 	{
-		include("login.php");
+		include("logoutbutton.php");
 	}
 ?>
 

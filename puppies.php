@@ -32,13 +32,17 @@
   <body>
     <div class="container">
 
-      <?php      
-          include("navBar.php");
-      ?>
-
 	<?php
-		include("login.php");
-	?>
+    include("navBar.php");
+    if (!isset($_SESSION['myusername']))
+        {
+            include("login.php");
+        }
+        else
+        {
+            include("logoutbutton.php");
+        }
+    ?>
 
         <div class="contentProfile">
 

@@ -40,13 +40,17 @@ include("loginJquery.php");
     include("sidebar.php");
     ?>
     <!--End of Sidebar-->
-      <?php      
-          include("navBar.php");
-      ?>
-
-	<?php
-		include("login.php");
-	?>
+      <?php
+		include("navBar.php");
+		if (!isset($_SESSION['myusername']))
+			{
+				include("login.php");
+			}
+			else
+			{
+				include("logoutbutton.php");
+			}
+		?>
 
         <div class="contentProfile">
 
