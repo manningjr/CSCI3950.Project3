@@ -37,7 +37,7 @@ if($count==1){
 
 $_SESSION['myusername'] = $myusername;
 
-header("location: puppies.php");
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 else {
 header("location: loginIncorrect.php");
