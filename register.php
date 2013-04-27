@@ -73,31 +73,31 @@ include("loginJquery.php");
     <p>Registering now will speed up the checkout process.
 </p>
   </div>
-  <form id:'registerUser' name='registerUser' method='post' action=''></td></tr>
+  <form id:"registerUser" name="registerUser" method="post" action=""></td></tr>
   <table>
   	<tr><td><input type='text' name='username'/></td><td> <label for='username'>Username</label></td></tr>
 			<?php $username = $_REQUEST['username']; ?>
 	<tr><td><input type='text' name = 'fname' /></td><td> <label for='fname'>First Name</label></td></tr>
-			<?php $username = $_REQUEST['fname']; ?>
+			<?php $fname = $_REQUEST['fname']; ?>
     <tr><td><input type='text' name = 'lname' /></td><td> <label for='fname'>Last Name</label></td></tr>
-			<?php $username = $_REQUEST['lname']; ?>
+			<?php $lname = $_REQUEST['lname']; ?>
 	<tr><td><input type='password' name = 'password' /></td><td> <label for='password'>Password<label></td></tr>
-			<?php $username = $_REQUEST['password']; ?>
-   	<tr><td><input type='password' name = 'cpassword' /></td><td> <label for='cpassword'>Confirm Pasrd<label></td></tr>
-			<?php $username = $_REQUEST['cpassword']; ?>
+			<?php $password = $_REQUEST['password']; ?>
+   	<tr><td><input type='password' name = 'cpassword' /></td><td> <label for='cpassword'>Confirm Password<label></td></tr>
+			<?php $cpassword = $_REQUEST['cpassword']; ?>
    	<tr><td><input type='text' name = 'email' /></td><td> <label for='email'>Email<label></td></tr>
-			<?php $username = $_REQUEST['email']; ?>
+			<?php $email = $_REQUEST['email']; ?>
    	<tr><td><input type='text' name = 'phoneNum' /></td><td> <label for='phoneNum'>Phone Number<label></td></tr>
-			<?php $username = $_REQUEST['phoneNum']; ?>
+			<?php $phoneNum = $_REQUEST['phoneNum']; ?>
 	<tr><td><input type='text' name = 'cardNum' /></td><td> <label for='cardNum'>Card Number<label></td></tr>
-			<?php $username = $_REQUEST['cardNum']; ?>
+			<?php $cardNum = $_REQUEST['cardNum']; ?>
    	<tr><td><input type='text' name = 'secCode' /></td><td> <label for='secCode'>Security Code<label></td></tr>
-			<?php $username = $_REQUEST['secCode']; ?>
+			<?php $secCode = $_REQUEST['secCode']; ?>
    	<tr><td><input type='text' name = 'street' /></td><td> <label for='street'>Street<label></td></tr>
-			<?php $username = $_REQUEST['street']; ?>
+			<?php $street = $_REQUEST['street']; ?>
    	<tr><td><input type='text' name = 'city'/></td><td> <label for='city'>City<label></td></tr>
-			<?php $username = $_REQUEST['city']; ?>
-	<tr><td><select name='State'> 
+			<?php $city = $_REQUEST['city']; ?>
+	<tr><td><select name='state'> 
 		<option value='' selected='selected'>Select</option> 
 		<option value='AL'>Alabama</option> 
 		<option value='AK'>Alaska</option> 
@@ -151,10 +151,10 @@ include("loginJquery.php");
 		<option value='WI'>Wisconsin</option> 
 		<option value='WY'>Wyoming</option>
 		</select></td><td>State</td></tr>
-		<?php $username = $_REQUEST['state']; ?>             
+		<?php $state = $_REQUEST['state']; ?>             
             
 		<tr><td><input type='text' name = 'zip' /></td><td> <label for='zip'>Zip</label></td></tr>
-			<?php $username = $_REQUEST['zip']; ?>
+			<?php $zip = $_REQUEST['zip']; ?>
 		
 		</table>
         
@@ -165,7 +165,7 @@ include("loginJquery.php");
 					<?php     
                             require ('./mysql_connect.php');
                             ini_set('display_errors',1);
-	if (isset($username) || isset($fname) || isset($lname) || isset($password1) || isset($cpassword) || isset($email) || isset($phoneNum) || isset($cardNum) || isset($secCode) || isset($street) || isset($city) || isset($state) || isset($zip))
+	if (isset($username) || isset($fname) || isset($lname) || isset($password) || isset($cpassword) || isset($email) || isset($phoneNum) || isset($cardNum) || isset($secCode) || isset($street) || isset($city) || isset($state) || isset($zip))
 								{
 														
 				// requirements that must be met
