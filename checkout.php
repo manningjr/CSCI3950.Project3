@@ -71,7 +71,17 @@ else{
    echo "<form action='confirm.php'>";
    //echo   "<input type='hidden' name='customer_id' value='$customer_id'/>";
    echo "<table>";
-   echo "<tr><td>First Name:</td><td><input type='text' name = 'fname' /></td></tr>";
+     $username = $_SESSION['myusername'];
+	 $query = "SELECT fname FROM user WHERE username='$username'";
+                    	$results=mysql_query($query);
+                    	while ($row=mysql_fetch_array($results)) 
+                    	{
+							$fname=$row['fname'];
+						}
+	   $lname = $_SESSION['lname'];
+	echo "<td>" . $username . "</td>";
+	echo "<td>" . $fname . "</td>";
+   echo "<tr><td>First Name:</td><td><input type='text' name = 'fname' value='$fname'/></td></tr>";
    echo "<tr><td>Last Name:</td><td><input type='text' name = 'lname' /></td></tr>";
    echo "<tr><td>Email Address:</td><td><input type = 'text' name = 'email'/></td></tr>";
    echo "<tr><td>Phone Number:</td><td><input type = 'text' name = 'tel'/></td></tr>";
