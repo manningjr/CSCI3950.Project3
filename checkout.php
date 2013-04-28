@@ -72,13 +72,24 @@ else{
    //echo   "<input type='hidden' name='customer_id' value='$customer_id'/>";
    echo "<table>";
      $username = $_SESSION['myusername'];
-	 $query = "SELECT fname FROM user WHERE username='$username'";
+	 $query = "SELECT * FROM user WHERE username='$username'";
                     	$results=mysql_query($query);
                     	while ($row=mysql_fetch_array($results)) 
                     	{
+							$id=$row['member_id'];
+							$username=$row['username'];
+							$password=$row['password'];
 							$fname=$row['fname'];
+							$lname=$row['lname'];
+							$email=$row['email'];
+							$phoneNum=$row['phoneNum'];
+							$card_number=$row['card_number'];
+							$security=$row['security_code'];
+							$street=$row['street'];
+							$city=$row['city'];
+							$state=$row['state'];
+							$zip=$row['zip'];
 						}
-	   $lname = $_SESSION['lname'];
 	echo "<td>" . $username . "</td>";
 	echo "<td>" . $fname . "</td>";
    echo "<tr><td>First Name:</td><td><input type='text' name = 'fname' value='$fname'/></td></tr>";
