@@ -24,7 +24,7 @@
 				?>
 
 				<script>
-					onload = function f()
+					onload = function ()
 					{
 						alert("Puppy already in cart");
 					}
