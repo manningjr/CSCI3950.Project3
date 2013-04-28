@@ -121,7 +121,7 @@ include("addToCart.php");
         echo "</div>";
         
 		    echo "<div class='infoButtons3'>";
-		      echo"<a href='checkout.php'> <img src='img/pupcart3.png' /></a>";
+		      echo"<a href='remove.php?puppy_id=".$puppy_id."'> <img src='img/pupcart3.png' /></a>";
 		    echo "</div>";
 
         //  Remove button printed here for each puppy. 'puppy_id' needs to be linked to the remove buttons so it can be 
