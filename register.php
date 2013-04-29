@@ -116,17 +116,17 @@ include("loginJquery.php");
         
       <span id="phoneNumTextField">
       <input type="text" name="phoneNum" id="phoneNum" />
-      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span><span class="textfieldMinCharsMsg">Minimum number of characters not met.</span><span class="textfieldMaxCharsMsg">Exceeded maximum number of characters.</span></span><br/>
 		<?php $phoneNum = $_REQUEST['phoneNum']; ?>
         
         <span id="cardNumTextField">
         <input type="text" name="cardNum" id="cardNum" />
         <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
-		<?php $phoneNum = $_REQUEST['cardNum']; ?>
+		<?php $cardNum = $_REQUEST['cardNum']; ?>
         
         <span id="secCodeTextField">
         <input type="text" name="secCode" id="secCode" />
-        <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+        <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span><span class="textfieldMaxCharsMsg">Exceeded maximum number of characters.</span><span class="textfieldMinCharsMsg">Minimum number of characters not met.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
 		<?php $secCode = $_REQUEST['secCode']; ?>
         
         <span id="streetTextField">
@@ -284,15 +284,15 @@ include("loginJquery.php");
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "custom", {validateOn:["blur"]});
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "custom", {pattern:"/[A-Za-z]{2,}$/", validateOn:["blur"]});
 var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "custom", {pattern:"/[A-Za-z]{2,}$/", useCharacterMasking:true, validateOn:["blur"]});
-var sprytextfield4 = new Spry.Widget.ValidationTextField("fnameTextField", "custom", {pattern:"/[A-Za-z]{2,}$/", hint:"First Name"});
+var sprytextfield4 = new Spry.Widget.ValidationTextField("fnameTextField", "custom", {pattern:"/[A-Za-z]{1,}$/", hint:"First Name"});
 var sprytextfield5 = new Spry.Widget.ValidationTextField("usernameTextField", "custom", {hint:"Username"});
 var sprytextfield6 = new Spry.Widget.ValidationTextField("lnameTextField", "custom", {pattern:"/[A-Za-z]{2,}$/", hint:"Last Name"});
 var sprytextfield7 = new Spry.Widget.ValidationTextField("passwordTextField", "custom");
 var sprytextfield8 = new Spry.Widget.ValidationTextField("sprytextfield8");
 var sprytextfield9 = new Spry.Widget.ValidationTextField("emailTextField", "email", {hint:"Email"});
-var sprytextfield10 = new Spry.Widget.ValidationTextField("phoneNumTextField", "phone_number", {hint:"Phone Number"});
-var sprytextfield11 = new Spry.Widget.ValidationTextField("cardNumTextField", "credit_card", {hint:"Credit Card"});
-var sprytextfield12 = new Spry.Widget.ValidationTextField("secCodeTextField", "integer", {hint:"Security Code"});
+var sprytextfield10 = new Spry.Widget.ValidationTextField("phoneNumTextField", "phone_number", {hint:"Phone Number", useCharacterMasking:true});
+var sprytextfield11 = new Spry.Widget.ValidationTextField("cardNumTextField", "credit_card", {hint:"Credit Card", useCharacterMasking:true});
+var sprytextfield12 = new Spry.Widget.ValidationTextField("secCodeTextField", "integer", {hint:"Security Code", maxChars:4, minChars:4});
 var sprytextfield13 = new Spry.Widget.ValidationTextField("streetTextField", "custom", {hint:"Street"});
 var sprytextfield14 = new Spry.Widget.ValidationTextField("cityTextField", "custom", {hint:"City"});
 var sprytextfield15 = new Spry.Widget.ValidationTextField("zipTextField", "zip_code", {hint:"Zip Code"});
