@@ -154,41 +154,84 @@ else{
 </select></td></tr>";
     echo "<tr><td>Zip Code:</td><td><input type = 'text' name = 'zip'/></td></tr>";
 	echo "<tr><td>Credit Card Number:</td><td><input type = 'text' name = 'cardNumber'/></td></tr>";
-	echo   "<tr><td></td><td><button type='submit'>    Place Order    </button><button type='Reset'>     Cancel     </button></td></tr>";
+	echo   "<tr><td></td><td><button type='submit'>    Confirm Order    </button><button type='Reset'>     Cancel     </button></td></tr>";
     echo "</table>";
    echo "</form>";
 }?>
 </div>
 
 <div class="right">
+<h3 style="margin-top:-20px; text-align:center;">Puppy Selected</h3>
 <?php
-echo"<h3> Puppy Selected:</h3>";
-echo "<div class='puppic'>";
-         // echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image' width='100' height='100'/></a>";
-        echo "</div>";
-        
-        echo "<div class='puppy-list'>";
-          echo "<table>";
-          //  echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
-          //  echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
-          //  echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
-          //  echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
-          echo "</table>";
-        echo "</div>";
-		
-		echo "<div class='puppic'>";
-          echo"<img src=img/puppic/1.jpg alt='Puppy image' width='100' height='100'/></a>";
-        echo "</div>";
-        
-        echo "<div class='puppy-list'>";
-          echo "<table>";
-          echo "<tr><td>Name:</td><td><b>Turk</b></td></tr>";
-          echo "<tr><td>Breed:</td><td><b>Golden Retriever</b></td></tr>";
-          echo "<tr><td>Sex:</td><td><b>Male</b></td></tr>";
-          echo "<tr><td>Price:</td><td><b>$700</b></td></tr>";
-          echo "</table>";
-        echo "</div>";
-   ?>
+ini_set('display_errors', 1);
+include("addToCart.php");
+?>
+<?php
+
+      if (isset($_SESSION['cart']) && !empty($_SESSION['cart']))
+      {
+        $database = database_connect();
+
+        $session = $_SESSION;
+
+
+        $queries = array(); // Make queries array
+
+
+        //  Makes queries out of $_SESSION data
+        $i = 0; //  Index placeholder
+        foreach ($session['cart'] as $key=>$value)
+        {
+          $queries[$i] = "SELECT * FROM `puppies` WHERE `puppy_id` = '" . $value . "'";   //  Make query
+          
+  		
+  		////////////////////////////////////////////////////////
+  		$blah = mysql_query($queries[$i]);
+  		while($puppy = mysql_fetch_assoc($blah))
+        {
+          $puppy_id = $puppy['puppy_id'];   // Keep as hidden field on image links to pupInfo. Then we can just send this field with the link and query for the correct id on pupInfo.php
+          $pupName = $puppy['name'];
+          $breed = $puppy['breed'];
+          $birthday = $puppy['birthday'];
+          $sex = $puppy['sex'];
+          //$size = $puppy['size'];
+          if ($puppy['vaccination'] == 1)
+            $vaccin = "Yes";
+          else
+            $vaccin = "No";
+          $price = $puppy['price'];
+          $location = $puppy['location'];
+          $img = $puppy['img_name'];
+
+          $puppies[] = $puppy;  //Stores info into puppies[] for potential use later. May not be necessary.
+  		 
+          echo "<hr>";
+          
+          echo "<div class='puppic'>";
+            echo"<a href='pupInfo.php?id=" . $puppy_id . "'><img src='$img' alt='Puppy image' width='100' height='100'/></a>";
+          echo "</div>";
+          
+          echo "<div class='puppy-list'>";
+            echo "<table>";
+              echo "<tr><td>Name:</td><td><b>$pupName</b></td></tr>";
+              echo "<tr><td>Breed:</td><td><b>$breed</b></td></tr>";
+              echo "<tr><td>Sex:</td><td><b>$sex</b></td></tr>";
+              echo "<tr><td>Price:</td><td><b>$$price</b></td></tr>";
+            echo "</table>";
+          echo "</div>";
+          
+  		    echo "<div class='infoButtons3'>";
+  		      echo"<a href='remove.php?puppy_id=".$puppy_id."'> <img src='img/pupcart3.png' /></a>";
+  		    echo "</div>";
+
+        }
+  	  
+  	  $i++; //  Increment index
+        }
+        echo "</p>";
+	  }
+      ?>
+
 </div>
 </div>
 
