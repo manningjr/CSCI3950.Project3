@@ -74,7 +74,7 @@ include("loginJquery.php");
 <img src="img/register.jpg" class="pics"/>
 </div>
 
-<div class="left">
+<div class="left" style="color:white;">
  
 <div class="about">
     <p>You need to register in order to start the checkout process.
@@ -97,10 +97,10 @@ include("loginJquery.php");
 		<span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
 		<?php $lname = $_REQUEST['lname']; ?>
         
-      <input type='password' name = 'password' /><label for='password'>Password<label><br/>
+      <input type='password' name = 'password' placeholder="Password"/><br/>
 		  <?php $password = $_REQUEST['password']; ?>
             
-   	<input type='password' name = 'cpassword' /> <label for='cpassword'>Confirm Password<label>
+   	<input type='password' name = 'cpassword' placeholder="Confirm Password"/>
 			<?php $cpassword = $_REQUEST['cpassword']; ?><br/>
         
       <span id="emailTextField">
@@ -134,7 +134,7 @@ include("loginJquery.php");
 		<?php $city = $_REQUEST['city']; ?>
         
         <select name='state'> 
-		<option value='' selected='selected'>Select</option> 
+		<option value='' selected='selected'>Select State</option> 
 		<option value='AL'>Alabama</option> 
 		<option value='AK'>Alaska</option> 
 		<option value='AZ'>Arizona</option> 
@@ -186,7 +186,7 @@ include("loginJquery.php");
 		<option value='WV'>West Virginia</option> 
 		<option value='WI'>Wisconsin</option> 
 		<option value='WY'>Wyoming</option>
-		</select>State
+		</select>
 		<?php $state = $_REQUEST['state']; ?><br/>             
             
 		<span id="zipTextField">
