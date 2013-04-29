@@ -82,6 +82,9 @@ include("loginJquery.php");
   </div>
   <form id:"registerUser" name="registerUser" method="post" action="">
         
+        
+          <hr />
+     <h3>Personal Information</h3>   
 	      <span id="usernameTextField">
           <input type="text" name="username" id="username2" />
           <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
@@ -103,6 +106,9 @@ include("loginJquery.php");
    	<input type='password' name = 'cpassword' placeholder="Confirm Password"/>
 			<?php $cpassword = $_REQUEST['cpassword']; ?><br/>
         
+        
+     <hr />
+     <h3>Shipping Information</h3>   
       <span id="emailTextField">
       <input type="text" name="email" id="email" />
       <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
@@ -196,7 +202,7 @@ include("loginJquery.php");
         
         <br/>
         
-	<input name="submit" type="submit" value="Register"/-->
+	<input name="submit" type="submit" style="font-size:23px;" value="        Register        "/-->
 					
 					<?php     
                             require ('./mysql_connect.php');
