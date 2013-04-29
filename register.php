@@ -80,35 +80,54 @@ include("loginJquery.php");
     <p>You need to register in order to start the checkout process.
 </p>
   </div>
-  <form id:"registerUser" name="registerUser" method="post" action=""></td></tr>
-  <table>
-  	<tr>
-  	  <td><span id="sprytextfield1">
-      <input type="text" name="username" id="username" />
-      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td><td> <label for='username'>Username</label></td></tr>
-			<?php $username = $_REQUEST['username']; ?>
-	<tr>
-	  <td><span id="sprytextfield2">
-      <input type="text" name="fname" id="fname" />
-      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td><td> <label for='fname'>First Name</label></td></tr>
-			<?php $fname = $_REQUEST['fname']; ?>
-    <tr>
-      <td><span id="sprytextfield3">
-      <input type="text" name="lname" id="lname" />
-      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td><td> <label for='fname'>Last Name</label></td></tr>
-			<?php $lname = $_REQUEST['lname']; ?>
-	<tr><td><input type='password' name = 'password' /></td><td> <label for='password'>Password<label></td></tr>
-			<?php $password = $_REQUEST['password']; ?>
-   	<tr><td><input type='password' name = 'cpassword' /></td><td> <label for='cpassword'>Confirm Password<label></td></tr>
-			<?php $cpassword = $_REQUEST['cpassword']; ?>
-   	<tr><td><input type='text' name = 'email' /></td><td> <label for='email'>Email<label></td></tr>
-			<?php $email = $_REQUEST['email']; ?>
-   	<tr><td><input type='text' name = 'phoneNum' /></td><td> <label for='phoneNum'>Phone Number<label></td></tr>
-			<?php $phoneNum = $_REQUEST['phoneNum']; ?>
-	<tr><td><input type='text' name = 'cardNum' /></td><td> <label for='cardNum'>Card Number<label></td></tr>
-			<?php $cardNum = $_REQUEST['cardNum']; ?>
-   	<tr><td><input type='text' name = 'secCode' /></td><td> <label for='secCode'>Security Code<label></td></tr>
-			<?php $secCode = $_REQUEST['secCode']; ?>
+  <form id:"registerUser" name="registerUser" method="post" action="">
+        
+	      <span id="usernameTextField">
+          <input type="text" name="username" id="username2" />
+          <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+       	<?php $username = $_REQUEST['username']; ?>
+                  
+ 	      <span id="fnameTextField">
+          <input type="text" name="fname" id="fname" />
+          <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $fname = $_REQUEST['fname']; ?>
+        
+		<span id="lnameTextField">
+		<input type="text" name="lname" id="lname" />
+		<span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $lname = $_REQUEST['lname']; ?>
+        
+      <input type='password' name = 'password' /><label for='password'>Password<label><br/>
+		  <?php $password = $_REQUEST['password']; ?>
+            
+   	<input type='password' name = 'cpassword' /> <label for='cpassword'>Confirm Password<label>
+			<?php $cpassword = $_REQUEST['cpassword']; ?><br/>
+        
+      <span id="emailTextField">
+      <input type="text" name="email" id="email" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $lname = $_REQUEST['lname']; ?>
+        
+      <span id="phoneNumTextField">
+      <input type="text" name="phoneNum" id="phoneNum" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $phoneNum = $_REQUEST['phoneNum']; ?>
+        
+        <span id="cardNumTextField">
+        <input type="text" name="cardNum" id="cardNum" />
+        <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $phoneNum = $_REQUEST['cardNum']; ?>
+        
+        <span id="sprytextfield12">
+        <input type="text" name="secCode" id="secCode" />
+        <span class="textfieldRequiredMsg">A value is required.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $secCode = $_REQUEST['secCode']; ?>
+        
+        <span id="sprytextfield12"><span id="sprytextfield13">
+        <input type="text" name="street" id="street" />
+        <span class="textfieldRequiredMsg">A value is required.</span></span><span class="textfieldRequiredMsg">A value is required.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $secCode = $_REQUEST['secCode']; ?>
+	<!--
    	<tr><td><input type='text' name = 'street' /></td><td> <label for='street'>Street<label></td></tr>
 			<?php $street = $_REQUEST['street']; ?>
    	<tr><td><input type='text' name = 'city'/></td><td> <label for='city'>City<label></td></tr>
@@ -176,7 +195,7 @@ include("loginJquery.php");
         
         <br/>
         
-	<input name="submit" type="submit" value="Register"/>
+	<input name="submit" type="submit" value="Register"/-->
 					
 					<?php     
                             require ('./mysql_connect.php');
@@ -258,6 +277,16 @@ include("loginJquery.php");
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "custom", {validateOn:["blur"]});
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "custom", {pattern:"/[A-Za-z]{2,}$/", validateOn:["blur"]});
 var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "custom", {pattern:"/[A-Za-z]{2,}$/", useCharacterMasking:true, validateOn:["blur"]});
+var sprytextfield4 = new Spry.Widget.ValidationTextField("fnameTextField", "custom", {pattern:"/[A-Za-z]{2,}$/", hint:"First Name"});
+var sprytextfield5 = new Spry.Widget.ValidationTextField("usernameTextField", "custom", {hint:"Username"});
+var sprytextfield6 = new Spry.Widget.ValidationTextField("lnameTextField", "custom", {pattern:"/[A-Za-z]{2,}$/", hint:"Last Name"});
+var sprytextfield7 = new Spry.Widget.ValidationTextField("passwordTextField", "custom");
+var sprytextfield8 = new Spry.Widget.ValidationTextField("sprytextfield8");
+var sprytextfield9 = new Spry.Widget.ValidationTextField("emailTextField", "email", {hint:"Email"});
+var sprytextfield10 = new Spry.Widget.ValidationTextField("phoneNumTextField", "phone_number", {hint:"Phone Number"});
+var sprytextfield11 = new Spry.Widget.ValidationTextField("cardNumTextField", "credit_card", {hint:"Credit Card"});
+var sprytextfield12 = new Spry.Widget.ValidationTextField("sprytextfield12");
+var sprytextfield13 = new Spry.Widget.ValidationTextField("sprytextfield13");
   </script>
   </body>
 </html>
