@@ -118,21 +118,22 @@ include("loginJquery.php");
         <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
 		<?php $phoneNum = $_REQUEST['cardNum']; ?>
         
-        <span id="sprytextfield12">
+        <span id="secCodeTextField">
         <input type="text" name="secCode" id="secCode" />
-        <span class="textfieldRequiredMsg">A value is required.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+        <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
 		<?php $secCode = $_REQUEST['secCode']; ?>
         
-        <span id="sprytextfield12"><span id="sprytextfield13">
+        <span id="streetTextField">
         <input type="text" name="street" id="street" />
-        <span class="textfieldRequiredMsg">A value is required.</span></span><span class="textfieldRequiredMsg">A value is required.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
-		<?php $secCode = $_REQUEST['secCode']; ?>
-	<!--
-   	<tr><td><input type='text' name = 'street' /></td><td> <label for='street'>Street<label></td></tr>
-			<?php $street = $_REQUEST['street']; ?>
-   	<tr><td><input type='text' name = 'city'/></td><td> <label for='city'>City<label></td></tr>
-			<?php $city = $_REQUEST['city']; ?>
-	<tr><td><select name='state'> 
+        <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $street = $_REQUEST['street']; ?>
+        
+        <span id="cityTextField">
+        <input type="text" name="city" id="city" />
+        <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $city = $_REQUEST['city']; ?>
+        
+        <select name='state'> 
 		<option value='' selected='selected'>Select</option> 
 		<option value='AL'>Alabama</option> 
 		<option value='AK'>Alaska</option> 
@@ -185,13 +186,13 @@ include("loginJquery.php");
 		<option value='WV'>West Virginia</option> 
 		<option value='WI'>Wisconsin</option> 
 		<option value='WY'>Wyoming</option>
-		</select></td><td>State</td></tr>
-		<?php $state = $_REQUEST['state']; ?>             
+		</select>State
+		<?php $state = $_REQUEST['state']; ?><br/>             
             
-		<tr><td><input type='text' name = 'zip' /></td><td> <label for='zip'>Zip</label></td></tr>
-			<?php $zip = $_REQUEST['zip']; ?>
-		
-		</table>
+		<span id="zipTextField">
+        <input type="text" name="zip" id="zip" />
+        <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><br/>
+		<?php $zip = $_REQUEST['zip']; ?>
         
         <br/>
         
@@ -285,8 +286,10 @@ var sprytextfield8 = new Spry.Widget.ValidationTextField("sprytextfield8");
 var sprytextfield9 = new Spry.Widget.ValidationTextField("emailTextField", "email", {hint:"Email"});
 var sprytextfield10 = new Spry.Widget.ValidationTextField("phoneNumTextField", "phone_number", {hint:"Phone Number"});
 var sprytextfield11 = new Spry.Widget.ValidationTextField("cardNumTextField", "credit_card", {hint:"Credit Card"});
-var sprytextfield12 = new Spry.Widget.ValidationTextField("sprytextfield12");
-var sprytextfield13 = new Spry.Widget.ValidationTextField("sprytextfield13");
+var sprytextfield12 = new Spry.Widget.ValidationTextField("secCodeTextField", "integer", {hint:"Security Code"});
+var sprytextfield13 = new Spry.Widget.ValidationTextField("streetTextField", "custom", {hint:"Street"});
+var sprytextfield14 = new Spry.Widget.ValidationTextField("cityTextField", "custom", {hint:"City"});
+var sprytextfield15 = new Spry.Widget.ValidationTextField("zipTextField", "zip_code", {hint:"Zip Code"});
   </script>
   </body>
 </html>
