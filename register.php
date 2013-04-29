@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/pupInfo.css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
     <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+    <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
    
 
     <?php
@@ -27,6 +28,7 @@ ini_set('display_errors', 1);
 include("loginJquery.php");
 ?>
 
+  <script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
   </head>
 
 
@@ -34,7 +36,7 @@ include("loginJquery.php");
 
 
   <body>
-     <div class="container">
+  <div class="container">
  <!--Sidebar-->
     <?php
     include("sidebar.php");
@@ -80,11 +82,20 @@ include("loginJquery.php");
   </div>
   <form id:"registerUser" name="registerUser" method="post" action=""></td></tr>
   <table>
-  	<tr><td><input type='text' name='username'/></td><td> <label for='username'>Username</label></td></tr>
+  	<tr>
+  	  <td><span id="sprytextfield1">
+      <input type="text" name="username" id="username" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td><td> <label for='username'>Username</label></td></tr>
 			<?php $username = $_REQUEST['username']; ?>
-	<tr><td><input type='text' name = 'fname' /></td><td> <label for='fname'>First Name</label></td></tr>
+	<tr>
+	  <td><span id="sprytextfield2">
+      <input type="text" name="fname" id="fname" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td><td> <label for='fname'>First Name</label></td></tr>
 			<?php $fname = $_REQUEST['fname']; ?>
-    <tr><td><input type='text' name = 'lname' /></td><td> <label for='fname'>Last Name</label></td></tr>
+    <tr>
+      <td><span id="sprytextfield3">
+      <input type="text" name="lname" id="lname" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td><td> <label for='fname'>Last Name</label></td></tr>
 			<?php $lname = $_REQUEST['lname']; ?>
 	<tr><td><input type='password' name = 'password' /></td><td> <label for='password'>Password<label></td></tr>
 			<?php $password = $_REQUEST['password']; ?>
@@ -187,7 +198,7 @@ include("loginJquery.php");
 													echo "<p style='font-family:verdana; font-size:20px;'>" . $username . "</p>";
 													echo "<p>You have successfully entered in a username and password.</p>";
 													?>
-                                                    <script>
+          <script>
 													onload = function f()
 													{
 														alert("You have registered succesfully.");
@@ -243,5 +254,10 @@ include("loginJquery.php");
 
       <!-- end .container --></div>
       <!-- end .background--></div>
+  <script type="text/javascript">
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "custom", {validateOn:["blur"]});
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "custom", {pattern:"/[A-Za-z]{2,}$/", validateOn:["blur"]});
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "custom", {pattern:"/[A-Za-z]{2,}$/", useCharacterMasking:true, validateOn:["blur"]});
+  </script>
   </body>
 </html>
