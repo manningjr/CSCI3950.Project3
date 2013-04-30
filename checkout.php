@@ -17,6 +17,7 @@
 <?php
       ini_set('display_errors', 1);
       require("database/database.php");
+	  //Oh My God Rob
     ?>
 
 <?php
