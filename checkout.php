@@ -17,17 +17,10 @@
 <?php
       ini_set('display_errors', 1);
       require("database/database.php");
-	  //Oh My God Rob
-    ?>
+	
+		include("sidebarJquery.php");
 
-<?php
-ini_set('display_errors', 1);
-include("sidebarJquery.php");
-?>
-
-<?php
-ini_set('display_errors', 1);
-include("loginJquery.php");
+		include("loginJquery.php");
 ?>
 
 </head>
@@ -69,100 +62,59 @@ if (!isset($_SESSION['myusername'])){
 else{
 //echo "<p>The amount of your order is: $<b>$price</b>"; 
  //echo"<p><h4> Payment Information:</h4></p>";
-   echo "<form action='confirm.php'>";
+   
+   
+   echo "<form action='orderPlaced.php'>";
    //echo   "<input type='hidden' name='customer_id' value='$customer_id'/>";
+   
+   
    echo "<table>";
+   		
+	$database = database_connect();
+		
      $username = $_SESSION['myusername'];
-     print_r($_SESSION['myusername']);
-	 $query = "SELECT * FROM `user` WHERE `username` = '" . $_SESSION['myusername'] . "'";
-                    	$results=mysql_query($query);
-                    	while ($row=mysql_fetch_array($results)) 
-                    	{
-                        echo "<td>" . $row['username'] . "</td>";
-							$id=$row['member_id'];
-							$user=$row['username'];
-              echo $username;
-							$password=$row['password'];
-							$fname=$row['fname'];
-							$lname=$row['lname'];
-							$email=$row['email'];
-							$phoneNum=$row['phoneNum'];
-							$card_number=$row['card_number'];
-							$security=$row['security_code'];
-							$street=$row['street'];
-							$city=$row['city'];
-							$state=$row['state'];
-							$zip=$row['zip'];
 
-						}
-	echo "<td>" . $user . "</td>";
-	echo "<td>" . $fname . "</td>";
-   echo "<tr><td>First Name:</td><td>" . $fname . "</td></tr>";
-   echo "<tr><td>Last Name:</td><td><input type='text' name = 'lname' /></td></tr>";
-   echo "<tr><td>Email Address:</td><td><input type = 'text' name = 'email'/></td></tr>";
-   echo "<tr><td>Phone Number:</td><td><input type = 'text' name = 'tel'/></td></tr>";
-   echo "<tr><td>Street:</td><td><input type = 'text' name = 'street' /></td></tr>";
-   echo "<tr><td>City:</td><td><input type = 'text' name = 'city'/></td></tr>";
-   echo "<tr><td>State:</td><td><select name='State'> 
-<option value='' selected='selected'>Select</option> 
-<option value='AL'>Alabama</option> 
-<option value='AK'>Alaska</option> 
-<option value='AZ'>Arizona</option> 
-<option value='AR'>Arkansas</option> 
-<option value='CA'>California</option> 
-<option value='CO'>Colorado</option> 
-<option value='CT'>Connecticut</option> 
-<option value='DE'>Delaware</option> 
-<option value='DC'>District Of Columbia</option> 
-<option value='FL'>Florida</option> 
-<option value='GA'>Georgia</option> 
-<option value='HI'>Hawaii</option> 
-<option value='ID'>Idaho</option> 
-<option value='IL'>Illinois</option> 
-<option value='IN'>Indiana</option> 
-<option value='IA'>Iowa</option> 
-<option value='KS'>Kansas</option> 
-<option value='KY'>Kentucky</option> 
-<option value='LA'>Louisiana</option> 
-<option value='ME'>Maine</option> 
-<option value='MD'>Maryland</option> 
-<option value='MA'>Massachusetts</option> 
-<option value='MI'>Michigan</option> 
-<option value='MN'>Minnesota</option> 
-<option value='MS'>Mississippi</option> 
-<option value='MO'>Missouri</option> 
-<option value='MT'>Montana</option> 
-<option value='NE'>Nebraska</option> 
-<option value='NV'>Nevada</option> 
-<option value='NH'>New Hampshire</option> 
-<option value='NJ'>New Jersey</option> 
-<option value='NM'>New Mexico</option> 
-<option value='NY'>New York</option> 
-<option value='NC'>North Carolina</option> 
-<option value='ND'>North Dakota</option> 
-<option value='OH'>Ohio</option> 
-<option value='OK'>Oklahoma</option> 
-<option value='OR'>Oregon</option> 
-<option value='PA'>Pennsylvania</option> 
-<option value='RI'>Rhode Island</option> 
-<option value='SC'>South Carolina</option> 
-<option value='SD'>South Dakota</option> 
-<option value='TN'>Tennessee</option> 
-<option value='TX'>Texas</option> 
-<option value='UT'>Utah</option> 
-<option value='VT'>Vermont</option> 
-<option value='VA'>Virginia</option> 
-<option value='WA'>Washington</option> 
-<option value='WV'>West Virginia</option> 
-<option value='WI'>Wisconsin</option> 
-<option value='WY'>Wyoming</option>
-</select></td></tr>";
-    echo "<tr><td>Zip Code:</td><td><input type = 'text' name = 'zip'/></td></tr>";
-	echo "<tr><td>Credit Card Number:</td><td><input type = 'text' name = 'cardNumber'/></td></tr>";
-	echo   "<tr><td></td><td><button type='submit'>    Confirm Order    </button><button type='Reset'>     Cancel     </button></td></tr>";
+	 $query = "SELECT * FROM `user` WHERE `username` = '" . $username . "'";
+		 
+	 $results = mysql_query($query);
+	 
+     while($row = mysql_fetch_assoc($results))
+	 {
+		$user[] = $row;
+	 }
+	 
+	 $user = $user[0];
+	 
+	
+
+   echo "<tr><td>First Name:</td><td>".$user['fname']."</td></tr>";
+   echo "<tr><td>Last Name:</td><td>".$user['lname']."</td></tr>";
+   echo "<tr><td>Email Address:</td><td>".$user['email']."</td></tr>";
+   echo "<tr><td>Phone Number:</td><td>".$user['phoneNum']."</td></tr>";
+   echo "<tr><td>Street:</td><td>".$user['street']."</td></tr>";
+   echo "<tr><td>City:</td><td>".$user['city']."</td></tr>";
+   echo "<tr><td>State:</td><td>".$user['state']."</td></tr>";
+    echo "<tr><td>Zip Code:</td><td>".$user['zip']."</td></tr>";
+	echo "<tr><td>Credit Card Number:</td><td>".$user['card_number']."</td></tr>";
+	echo   "<tr><td></td><td></td></tr>";
     echo "</table>";
-   echo "</form>";
-}?>
+   
+
+	
+	foreach($user as $key => $value)
+	{
+		echo '<input type="hidden" name="'.$key.'" value="'.$value.'"/>';
+	}
+	
+	echo "<input type='submit' name='submit' />";
+	
+	
+	
+	echo "</form>"; // end of form
+
+} // end else statement
+
+?>
 </div>
 
 <div class="right">
